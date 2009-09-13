@@ -9,7 +9,7 @@ _mk = _this select 0;
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-call compile format["o%1 setSimpleTaskDescription['Sauter sur la centrale électrique au nord de Elektrozavodsk.<br/>Trouvez et fouillez une VW GOLF rouge.<br/> Nous cherchons une malette contenant un ordinateur.<br/> Rapportez-le à la base. <br/><br/>Je rappelle les consignes pas de bavures, la situation politique est plus que tendue. Les Russes attendent un pretexte pour intervenir.', 'Renseignement', '%1'];",_mk];
+call compile format["o%1 setSimpleTaskDescription['Sauter sur la centrale électrique au nord de Elektrozavodsk.<br/>Trouvez et fouillez une VW GOLF rouge.<br/>Nous cherchons une malette contenant un ordinateur.<br/>Rapportez-le à la base. <br/><br/>Je rappelle les consignes pas de bavures, la situation politique est plus que tendue. Les Russes attendent un pretexte pour intervenir.', 'Renseignement', '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
 
 // objets

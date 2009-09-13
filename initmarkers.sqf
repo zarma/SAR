@@ -2,7 +2,7 @@
 // Function file for Armed Assault 2
 // Created by: =[A*C]= Z
 //////////////////////////////////////////////////////////////////
-
+private ["_missions"];
 markers = [
 	"mk115040",
   "mk104127",
@@ -31,6 +31,8 @@ markers = [
 //nul=[] execVM "testmarkers.sqf";
 //_mission = "mk036131";
 //_mission = "mk017124";
-//_mission = "mk104127";
-_mission = "mk098067";
-call compile format["['%1'] execVM 'z_missions\%1.sqf';",_mission];
+_missions = ["mk036131","mk104127","mk098067","mk017124"];
+[(side player),"HQ"] sidechat format["_missions %1", _missions];
+{
+call compile format["['%1'] execVM 'z_missions\%1.sqf';",_x];
+} forEach _missions;

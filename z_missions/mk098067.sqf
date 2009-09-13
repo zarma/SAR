@@ -16,10 +16,10 @@ call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
 
 mk098067o1 = compile preprocessFile "z_missions\mk098067o1.sqf"; // placement des objets
 nil = [] call mk098067o1;
-/*
+
 mk098067h1 = compile preprocessFile "z_missions\mk098067h1.sqf"; // hostiles 
 nil = [] call mk098067h1;
-*/
+
 
 
 

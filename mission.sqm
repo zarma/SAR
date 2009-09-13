@@ -57,7 +57,7 @@ class Mission
 	randomSeed=12495445;
 	class Intel
 	{
-		briefingName="co20-z-blue-002-SAR-v0.93";
+		briefingName="co20-z-blue-002-SAR-v0.94";
 		startWeather=0.45347571;
 		startFog=0.40861988;
 		forecastWeather=0.91265208;
@@ -70,7 +70,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=15;
+		items=14;
 		class Item0
 		{
 			side="LOGIC";
@@ -591,28 +591,9 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9098.3203,241.99664,8029.7622};
-					azimut=270.65744;
-					id=72;
-					side="WEST";
-					vehicle="USMC_Soldier_SL";
-					player="PLAYER COMMANDER";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item11
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					presence=0;
 					position[]={804.91327,531.53955,16043.185};
-					id=73;
+					id=72;
 					side="WEST";
 					vehicle="USMC_Soldier";
 					leader=1;
@@ -620,7 +601,7 @@ class Mission
 				};
 			};
 		};
-		class Item12
+		class Item11
 		{
 			side="EAST";
 			class Vehicles
@@ -630,7 +611,7 @@ class Mission
 				{
 					presence=0;
 					position[]={935.08832,543.6839,16039.12};
-					id=74;
+					id=73;
 					side="EAST";
 					vehicle="RU_Soldier";
 					leader=1;
@@ -638,7 +619,7 @@ class Mission
 				};
 			};
 		};
-		class Item13
+		class Item12
 		{
 			side="GUER";
 			class Vehicles
@@ -648,7 +629,7 @@ class Mission
 				{
 					presence=0;
 					position[]={817.11713,527.45929,15896.803};
-					id=75;
+					id=74;
 					side="GUER";
 					vehicle="GUE_Soldier_1";
 					leader=1;
@@ -656,7 +637,7 @@ class Mission
 				};
 			};
 		};
-		class Item14
+		class Item13
 		{
 			side="CIV";
 			class Vehicles
@@ -666,7 +647,7 @@ class Mission
 				{
 					presence=0;
 					position[]={939.15631,532.11108,15904.937};
-					id=76;
+					id=75;
 					side="CIV";
 					vehicle="Citizen1";
 					leader=1;
@@ -1055,7 +1036,7 @@ class Mission
 		{
 			presence=0;
 			position[]={825.25311,530.435,15803.282};
-			id=77;
+			id=76;
 			side="AMBIENT LIFE";
 			vehicle="Hen";
 			leader=1;
@@ -1065,7 +1046,7 @@ class Mission
 		{
 			presence=0;
 			position[]={987.97211,528.86749,15762.621};
-			id=78;
+			id=77;
 			side="EMPTY";
 			vehicle="BIS_Steerable_Parachute";
 			leader=1;
@@ -1075,7 +1056,7 @@ class Mission
 		{
 			position[]={10467.675,5.98,2421.5901};
 			azimut=162.689;
-			id=79;
+			id=78;
 			side="EMPTY";
 			vehicle="datsun1_civil_1_open";
 			skill=0.60000002;
