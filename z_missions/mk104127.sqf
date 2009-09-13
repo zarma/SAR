@@ -9,7 +9,8 @@ _mk = _this select 0;
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-call compile format["o%1 setSimpleTaskDescription['Sauter sur la centrale électrique au nord de Elektrozavodsk.<br/>Trouvez et fouillez une VW GOLF rouge.<br/>Nous cherchons une malette contenant un ordinateur.<br/>Rapportez-le à la base. <br/><br/>Je rappelle les consignes pas de bavures, la situation politique est plus que tendue. Les Russes attendent un pretexte pour intervenir.', 'Renseignement', '%1'];",_mk];
+//call compile format["o%1 setSimpleTaskDescription['Sauter sur la centrale électrique au nord de Elektrozavodsk.<br/>Trouvez et fouillez une VW GOLF rouge.<br/>Nous cherchons une malette contenant un ordinateur.<br/>Rapportez-le à la base. <br/><br/>Je rappelle les consignes pas de bavures, la situation politique est plus que tendue. Les Russes attendent un pretexte pour intervenir.', 'Renseignement', '%1'];",_mk];
+call compile format["o%1 setSimpleTaskDescription['Sauter sur la centrale électrique au nord de Elektrozavodsk.<br/>Nous cherchons une malette contenant un ordinateur.<br/>Rapportez-le à la base. <br/><br/>Je rappelle les consignes pas de bavures, la situation politique est plus que tendue. Les Russes attendent un pretexte pour intervenir.', 'Renseignement', '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
 
 // objets
@@ -34,7 +35,7 @@ bmk104127=0;
 _pos = [10425.414, 2579.2412, 0];
 _t67 = createTrigger["EmptyDetector",_pos];
 _t67 setTriggerArea [10,10,0,False];
-_t67 setTriggerStatements ["((getpos (thislist select 0)) select 2 < 0.2)","[(side player),'HQ'] sidechat format['trouver une golf rouge dans la ville.']; ",""];
+_t67 setTriggerStatements ["((getpos (thislist select 0)) select 2 < 0.2)","[(side player),'HQ'] sidechat format['trouver et fouillez une golf rouge dans la ville.']; ",""];
 _t67 setTriggerActivation ["WEST","PRESENT",True];
 
 // trigger pour détection de la Golf
