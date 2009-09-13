@@ -1,0 +1,18 @@
+onLoadMission="Mission d'entraînement SAR";
+onLoadIntroTime = false;
+onLoadMissionTime = false;
+
+class Header
+{
+	gameType = Coop;            //DM, Team, Coop, ...
+	minPlayers = 1;             //min # of players the mission supports
+	maxPlayers = 40;            //Max # of players the mission supports
+};
+
+respawn = BASE;
+respawndelay = 10;
+//disabledAI = 1;
+
+#include "sounds.hpp"
+
+
