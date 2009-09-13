@@ -37,12 +37,13 @@ _t67 setTriggerArea [10,10,0,False];
 _t67 setTriggerStatements ["((getpos (thislist select 0)) select 2 < 0.2)","[(side player),'HQ'] sidechat format['trouver une golf rouge dans la ville.']; ",""];
 _t67 setTriggerActivation ["WEST","PRESENT",True];
 
-// id 
+// trigger pour détection de la Golf
 _pos = [10169.795, 1832.3529, 0];
 _t68 = createTrigger["EmptyDetector",_pos];
 _t68 setTriggerArea [10,10,0,False];
-_t68 setTriggerStatements ["This","mk104127=1",""];
-_t68 setTriggerActivation ["CIV","SWITCH",True];
+mk104127g=0;
+_t68 setTriggerActivation ["CIV","WEST D",True];
+_t68 setTriggerStatements ["This","mk104127g=1",""];
 
 // id 
 _pos = [10468.64, 2423.9492, 0];

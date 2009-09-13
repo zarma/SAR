@@ -6,7 +6,7 @@
 _mk =  _this select 0; // marqueur associé au trigger
 _trigger = _this select 1;
 _who = list _trigger;
-[(side player),"HQ"] sidechat format["who : %1 $ %2 ", _mk,_who];
+[(side player),"HQ"] sidechat format["mission %1 réussie.", _mk];
 
 
 

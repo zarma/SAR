@@ -1,19 +1,29 @@
+if !(isserver) exitwith {};
 /////// Début GOLF
 // id 6;
+
 _pos = [10168.702, 1832.3062];
-_veh6 =  createVehicle ["VWGolf", _pos,[],0,"CAN_COLLIDE"];
-_veh6 setPos _pos;
-_veh6 setSkill 0.60000002;
+mk104127golf =  createVehicle ["VWGolf", _pos,[],0,"CAN_COLLIDE"];
+mk104127golf setPos _pos;
+mk104127golf setSkill 0.60000002;
+_id = mk104127golf addaction ["Fouiller véhicule", "z_scripts\z_fouille_objet.sqf", [mk104127golf], 1, false, false];
+mk104127golf setVariable ["fouille", 0, true]; 
+
+_this = createTrigger ["EmptyDetector", [30, 30]];
+_this setTriggerType "SWITCH";
+_this setTriggerStatements ["(mk104127golf getVariable 'fouille')==1;", "['mk104127'] execVM 'z_scripts\z_taskok.sqf'", ""];
+_trigger_1 = _this;
+
 grp5 = createGroup centerC;
 _this = grp5 createUnit ["Rocker3", [10176.865, 1830.6976, 0], [], 0, "CAN_COLLIDE"];
-_this assignAsDriver _veh6;
-_this moveInDriver  _veh6;
+_this assignAsDriver mk104127golf;
+_this moveInDriver  mk104127golf;
 _this = grp5 createUnit ["Worker2", [10178.865, 1830.6976, 0], [], 0, "CAN_COLLIDE"];
-_this assignAsCargo _veh6;
-_this moveInCargo  _veh6;
+_this assignAsCargo mk104127golf;
+_this moveInCargo  mk104127golf;
 _this = grp5 createUnit ["Worker4", [10176.865, 1832.6976, 0], [], 0, "CAN_COLLIDE"];
-_this assignAsCargo _veh6;
-_this moveInCargo  _veh6;
+_this assignAsCargo mk104127golf;
+_this moveInCargo  mk104127golf;
 
 // debut déplacement de la GOLF
 _pos = [10169.253, 1838.7589, 0];
@@ -21,6 +31,7 @@ _radius = 0;
 _wp7 = grp5 addWaypoint [_pos,_radius];
 _wp7 setwaypointtype "MOVE";
 _wp7 setWaypointSpeed "FULL";
+_wp7 setWaypointStatements ["mk104127g==1", ""];
 
 // id 
 _pos = [10187.504, 1974.928, 0];
