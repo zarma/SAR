@@ -58,6 +58,7 @@ class Mission
 	class Intel
 	{
 		briefingName="co20-z-blue-002-SAR-v0.94";
+		resistanceEast=1;
 		startWeather=0.45347571;
 		startFog=0.40861988;
 		forecastWeather=0.91265208;
@@ -70,7 +71,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=14;
+		items=15;
 		class Item0
 		{
 			side="LOGIC";
@@ -655,6 +656,24 @@ class Mission
 				};
 			};
 		};
+		class Item14
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9626.6738,86.375397,13534.966};
+					id=79;
+					side="EAST";
+					vehicle="Ins_Soldier_Sab";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -1225,7 +1244,7 @@ class Mission
 		};
 		class Item26
 		{
-			position[]={9655.4316,84.381813,13564.187};
+			position[]={9635.2354,85.76738,13536.45};
 			name="sp096018a";
 			type="Empty";
 		};

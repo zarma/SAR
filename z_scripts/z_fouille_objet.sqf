@@ -11,5 +11,5 @@ _obj = _params select 0; // objet fouillé
 
 
 [(side player),"HQ"] sidechat format["_obj fouillé %1 ", _obj];
-
+sleep (30 + (random 30)); 
 _obj setVariable ["fouille", 1, true];

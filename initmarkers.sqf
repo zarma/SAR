@@ -31,7 +31,7 @@ markers = [
 //nul=[] execVM "testmarkers.sqf";
 //_mission = "mk036131";
 //_mission = "mk017124";
-_missions = ["mk036131","mk104127","mk098067","mk017124"];
+_missions = ["mk036131","mk104127","mk098067","mk017124","mk096018"];
 [(side player),"HQ"] sidechat format["_missions %1", _missions];
 {
 call compile format["['%1'] execVM 'z_missions\%1.sqf';",_x];

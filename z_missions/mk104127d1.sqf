@@ -16,6 +16,24 @@ hooker1 setDir 64.816399;
 hooker1 setPos _pos;
 hooker1 setSkill 0.60000002;
 
+_this = grp9 addWaypoint [[10464.719, 2429.4534, 0], 0];
+_this setWaypointSpeed "LIMITED";
+_this setWaypointBehaviour "CARELESS";
+_waypoint_3 = _this;
+
+_this = grp9 addWaypoint [[10470.678, 2431.02, 0], 0];
+_this setWaypointTimeout [10, 10, 10];
+_waypoint_4 = _this;
+
+_this = grp9 addWaypoint [[10475.967, 2415.8459, 0], 0];
+_this setWaypointTimeout [5, 5, 5];
+_waypoint_5 = _this;
+
+_this = grp9 addWaypoint [[10470.359, 2411.7214, 0], 0];
+_this setWaypointType "CYCLE";
+_this setWaypointTimeout [7, 7, 7];
+_waypoint_6 = _this;
+
 // id 14;
 _pos = [10209.714, 1764.1058];
 grp11 = createGroup (CIV);

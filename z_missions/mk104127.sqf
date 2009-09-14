@@ -27,6 +27,9 @@ nil = [] spawn mk104127d1;
 mk104127c1 = compile preprocessFile "z_missions\mk104127c1.sqf"; // cache armes
 nil = [] spawn mk104127c1;
 
+mk104127t1 = compile preprocessFile "z_missions\mk104127t1.sqf"; // gestion spécifique des tâches
+
+
 
 sleep 2;
 // Triggers
@@ -35,7 +38,8 @@ bmk104127=0;
 _pos = [10425.414, 2579.2412, 0];
 _t67 = createTrigger["EmptyDetector",_pos];
 _t67 setTriggerArea [10,10,0,False];
-_t67 setTriggerStatements ["((getpos (thislist select 0)) select 2 < 0.2)","[(side player),'HQ'] sidechat format['trouver et fouillez une golf rouge dans la ville.']; ",""];
+mk104127t=0;
+_t67 setTriggerStatements ["((getpos (thislist select 0)) select 2 < 0.2)","mk104127t=1;nil = [] spawn mk104127t1;",""];
 _t67 setTriggerActivation ["WEST","PRESENT",True];
 
 // trigger pour détection de la Golf

@@ -16,6 +16,17 @@ _veh31 = grp31 createUnit ["Pastor", _pos,[],0,"CAN_COLLIDE"];
 _veh31 setPos _pos;
 _veh31 setSkill 0.60000002;
 
+_this = grp31 addWaypoint [[10300.278, 1858.5699, 0], 0];
+_this setWaypointCombatMode "RED";
+_this setWaypointSpeed "LIMITED";
+_this setWaypointTimeout [5, 8, 15];
+_waypoint_7 = _this;
+
+_this = grp31 addWaypoint [[10299.402, 1842.5419], 0];
+_this setWaypointType "CYCLE";
+_this setWaypointTimeout [6, 8, 20];
+_waypoint_8 = _this;
+
 
 // id 17;
 _pos = [10291.984, 1852.8872];
