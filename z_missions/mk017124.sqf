@@ -9,9 +9,15 @@ _mk = _this select 0;
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-call compile format["o%1 setSimpleTaskDescription['Sauter sur le cible avec la plus grande précision possible.<br/>Pour valider l''objectif il faut réussir 6 sauts.', 'Saut de précision', '%1'];",_mk];
+_shorttext ="
+Saut de précision
+";
+_longtext = "
+Sauter sur le cible avec la plus grande précision possible.
+<br/>Pour valider l''objectif il faut réussir 6 sauts.
+";
+call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
-
 // objets
 
 _pos = [1751.744, 2906.6611, 0];

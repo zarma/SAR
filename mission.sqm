@@ -664,7 +664,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9626.6738,86.375397,13534.966};
+					position[]={9624.6396,86.526207,13528.867};
 					id=79;
 					side="EAST";
 					vehicle="Ins_Soldier_Sab";

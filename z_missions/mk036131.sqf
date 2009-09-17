@@ -9,9 +9,15 @@ _mk = _this select 0;
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-call compile format["o%1 setSimpleTaskDescription['Rejoingez le terminal de chargement en fin de ligne de chemin de fer', 'Rejoingez le terminal de chargement', '%1'];",_mk];
-call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
+_shorttext ="
+Rejoingez le terminal de chargement.
+";
+_longtext = "
+Rejoingez le terminal de chargement en fin de ligne de chemin de fer au sud de Komarovo'
+";
 
+call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
+call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
 // trigger
 
 _pos = [3633.9609, 2201.3787, 0];

@@ -13,4 +13,8 @@ respawn = BASE;
 respawndelay = 10;
 //disabledAI = 1;
 
+titleParam1 = "Difficulty"; 
+valuesParam1[] = {0,1,2,3};
+defValueParam1 = 0;
+textsParam1[] = {"Mix","Easy","Medium","Hard"};
 
