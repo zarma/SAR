@@ -25,9 +25,9 @@ markers = [
   ];
   
 _missions =[];
-_missions1 = ["mk017124","mk036131"];
-_missions2 = ["mk098067","mk104127"];
-_missions3 = ["mk096018"];
+_missions1 = ["mk017124","mk036131","mk072100"]; //faciles
+_missions2 = ["mk098067","mk104127"]; // moyennes
+_missions3 = ["mk096018"]; //difficiles
 
 ////// debug ///////
 // initialization of markers array
@@ -44,7 +44,13 @@ switch (Difficulty) do {
 };
 
 
-[(side player),"HQ"] sidechat format["_missions %1  %2", _missions,Difficulty];
+//[(side player),"HQ"] sidechat format["_missions %1  %2", _missions,Difficulty];
+_townlist = nearestLocations [markerPos "mk026096", ["CityCenter"], 20000];
+//[(side player),"HQ"] sidechat format["_townlist %1  ", _townlist];
+{
+[(side player),"HQ"] sidechat format["town %1 : %2", _x,text _x];
+} forEach _townlist;
+
 {
 call compile format["['%1'] execVM 'z_missions\%1.sqf';",_x];
 } forEach _missions;

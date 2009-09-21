@@ -28,7 +28,10 @@ class Mission
 		"caweapons_warfare_weapons",
 		"ca_animals2_chicken",
 		"HALO_Test",
-		"CAWheeled"
+		"CAWheeled",
+		"CATracked",
+		"CAWheeled2_LAV25",
+		"cawheeled2_m1114_armored"
 	};
 	addOnsAuto[]=
 	{
@@ -52,12 +55,16 @@ class Mission
 		"ca_animals2_chicken",
 		"HALO_Test",
 		"CAWheeled",
+		"CATracked",
+		"CAWheeled2_LAV25",
+		"cawheeled2_m1114_armored",
 		"chernarus"
 	};
 	randomSeed=12495445;
 	class Intel
 	{
 		briefingName="co20-z-blue-002-SAR-v0.94";
+		briefingDescription="Operation Enduring Freedom Tchernarus";
 		resistanceEast=1;
 		startWeather=0.45347571;
 		startFog=0.40861988;
@@ -146,12 +153,12 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={4724.3149,339,10278.195};
+					position[]={4685.1934,339,10413.794};
 					azimut=235;
 					id=15;
 					side="WEST";
 					vehicle="USMC_Soldier_Pilot";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					rank="MAJOR";
 					skill=0.60000002;
@@ -677,7 +684,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=40;
+		items=56;
 		class Item0
 		{
 			position[]={4772.9233,339,10138.855};
@@ -1080,6 +1087,166 @@ class Mission
 			vehicle="datsun1_civil_1_open";
 			skill=0.60000002;
 			text="v1";
+		};
+		class Item40
+		{
+			position[]={4073.9224,346.06635,10750.795};
+			azimut=328.83859;
+			id=80;
+			side="EMPTY";
+			vehicle="M1A2_TUSK_MG";
+			leader=1;
+			skill=0.60000002;
+			description="Leader Pilot";
+		};
+		class Item41
+		{
+			position[]={4078.9832,346.07275,10753.771};
+			azimut=328.13281;
+			id=81;
+			side="EMPTY";
+			vehicle="M1A2_TUSK_MG";
+			leader=1;
+			skill=0.60000002;
+			description="Leader Pilot";
+		};
+		class Item42
+		{
+			position[]={4083.9106,346.0853,10756.726};
+			azimut=328.87848;
+			id=82;
+			side="EMPTY";
+			vehicle="M1A2_TUSK_MG";
+			leader=1;
+			skill=0.60000002;
+			description="Leader Pilot";
+		};
+		class Item43
+		{
+			position[]={4089.1792,346.17706,10760.558};
+			azimut=328.37344;
+			id=83;
+			side="EMPTY";
+			vehicle="M1A2_TUSK_MG";
+			leader=1;
+			skill=0.60000002;
+			description="Leader Pilot";
+		};
+		class Item44
+		{
+			position[]={4056.6509,345.97012,10781.468};
+			azimut=-31.545723;
+			id=84;
+			side="EMPTY";
+			vehicle="LAV25";
+			skill=0.60000002;
+		};
+		class Item45
+		{
+			position[]={4061.7891,346.02109,10784.873};
+			azimut=-31.545723;
+			id=85;
+			side="EMPTY";
+			vehicle="LAV25";
+			skill=0.60000002;
+		};
+		class Item46
+		{
+			position[]={4066.5867,346.02429,10787.671};
+			azimut=-31.545723;
+			id=86;
+			side="EMPTY";
+			vehicle="LAV25";
+			skill=0.60000002;
+		};
+		class Item47
+		{
+			position[]={4070.1663,346.11206,10790.494};
+			azimut=-31.545723;
+			id=87;
+			side="EMPTY";
+			vehicle="LAV25";
+			skill=0.60000002;
+		};
+		class Item48
+		{
+			position[]={4649.4116,338.99973,10462.294};
+			azimut=148.43776;
+			special="NONE";
+			id=88;
+			side="EMPTY";
+			vehicle="HMMWV_Armored";
+			skill=0.60000002;
+		};
+		class Item49
+		{
+			position[]={4652.8418,339,10464.311};
+			azimut=148.43776;
+			special="NONE";
+			id=89;
+			side="EMPTY";
+			vehicle="HMMWV_Armored";
+			skill=0.60000002;
+		};
+		class Item50
+		{
+			position[]={4656.6729,339,10466.661};
+			azimut=148.43776;
+			special="NONE";
+			id=90;
+			side="EMPTY";
+			vehicle="HMMWV_Armored";
+			skill=0.60000002;
+		};
+		class Item51
+		{
+			position[]={4678.7827,339,10458.825};
+			azimut=258.1633;
+			special="NONE";
+			id=91;
+			side="EMPTY";
+			vehicle="HMMWV_Avenger";
+			skill=0.60000002;
+		};
+		class Item52
+		{
+			position[]={4679.7236,339,10454.456};
+			azimut=-97.167458;
+			special="NONE";
+			id=92;
+			side="EMPTY";
+			vehicle="HMMWV_MK19";
+			skill=0.60000002;
+		};
+		class Item53
+		{
+			position[]={4670.1748,338.99191,10443.77};
+			azimut=-30.249958;
+			special="NONE";
+			id=93;
+			side="EMPTY";
+			vehicle="HMMWV_TOW";
+			skill=0.60000002;
+		};
+		class Item54
+		{
+			position[]={4674.0078,338.99332,10437.519};
+			azimut=-34.690159;
+			special="NONE";
+			id=94;
+			side="EMPTY";
+			vehicle="HMMWV_M2";
+			skill=0.60000002;
+		};
+		class Item55
+		{
+			position[]={4696.4858,338.99197,10418.453};
+			azimut=255.26382;
+			special="NONE";
+			id=95;
+			side="EMPTY";
+			vehicle="HMMWV_M2";
+			skill=0.60000002;
 		};
 	};
 	class Markers

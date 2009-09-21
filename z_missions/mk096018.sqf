@@ -5,7 +5,7 @@
 
 _mk = _this select 0;
 
-[(side player),"HQ"] sidechat format["marker %1", _mk];
+//[(side player),"HQ"] sidechat format["marker %1", _mk];
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Assaut camp insurgés.'];",_mk];
