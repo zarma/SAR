@@ -63,7 +63,7 @@ class Mission
 	randomSeed=12495445;
 	class Intel
 	{
-		briefingName="co20-z-blue-002-SAR-v0.94";
+		briefingName="co20-z-blue-002-SAR-v0.61";
 		briefingDescription="Operation Enduring Freedom Tchernarus";
 		resistanceEast=1;
 		startWeather=0.45347571;
@@ -153,7 +153,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={4685.1934,339,10413.794};
+					position[]={4721.189,339,10287.99};
 					azimut=235;
 					id=15;
 					side="WEST";
@@ -544,10 +544,11 @@ class Mission
 				class Item0
 				{
 					position[]={4676.9824,339,10269.438};
-					azimut=93.623878;
+					azimut=93.623901;
 					id=54;
 					side="WEST";
 					vehicle="USMC_Soldier_Officer";
+					player="PLAY CDG";
 					leader=1;
 					rank="COLONEL";
 					skill=0.60000002;
@@ -671,7 +672,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9624.6396,86.526207,13528.867};
+					position[]={11556.186,323.25256,11371.709};
+					azimut=-111.2717;
 					id=79;
 					side="EAST";
 					vehicle="Ins_Soldier_Sab";
@@ -1309,7 +1311,7 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={11531.863,319.47516,11326.583};
+			position[]={11549.703,323.42502,11368.423};
 			name="mk115040";
 			type="Empty";
 		};
@@ -1381,7 +1383,7 @@ class Mission
 		};
 		class Item21
 		{
-			position[]={9638.5625,86.344597,13517.445};
+			position[]={10139.453,307.47015,11782.742};
 			name="mk096018";
 			type="Empty";
 		};
