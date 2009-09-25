@@ -253,3 +253,15 @@ if (true) then
   _this = createVehicle ["ZU23_Ins", [11493.121, 11311.565, 0], [], 0, "CAN_COLLIDE"];
   _vehicle_69 = _this;
 };
+
+
+// triggers liés aux véhicules
+_mpos = markerPos "mk115040";
+call compile format["ok%1=false",_mk];
+call compile format["t%1=createTrigger['EmptyDetector',_mpos]",_mk];
+call compile format["t%1 setTriggerArea [350, 350, 0, false]",_mk];
+call compile format["t%1 setTriggerActivation ['WEST', 'PRESENT', true]",_mk];
+call compile format["t%1 setTriggerStatements['!alive mk115040a1 && !alive mk115040a2 && !alive mk115040a3 && !alive mk115040a4 && !alive mk115040a5', '[''mk115040''] execVM ''z_scripts\z_taskok.sqf'';', 'ok%1=false']",_mk];
+
+
+

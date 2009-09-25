@@ -10,6 +10,8 @@ _params = _this select 3;
 _obj = _params select 0; // objet fouillé
 
 
-[(side player),"HQ"] sidechat format["_obj fouillé %1 ", _obj];
+//[(side player),"HQ"] sidechat format["_obj fouillé %1 ", _obj];
+[(side player),"HQ"] sidechat format["Fouille en cours "];
 sleep (30 + (random 30)); 
 _obj setVariable ["fouille", 1, true];
+[(side player),"HQ"] sidechat format["Fouille terminée"];

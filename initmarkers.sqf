@@ -42,7 +42,9 @@ switch (Difficulty) do {
 	case 2: {_missions = _missions2;};
 	case 3: {_missions = _missions3;};
 };
-_missions =["mk115040"];
+_missions =["mk096018"];
+
+//_missions =["mk072100"];
 
 //[(side player),"HQ"] sidechat format["_missions %1  %2", _missions,Difficulty];
 _townlist = nearestLocations [markerPos "mk026096", ["CityCenter"], 20000];

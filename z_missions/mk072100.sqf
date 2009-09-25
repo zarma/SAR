@@ -31,7 +31,7 @@ sleep 2;
 ctmk072100=0;
 _t49 = createTrigger["EmptyDetector",_pos];
 _t49 setTriggerArea [4.5,4.5,0,False];
-_t49 setTriggerStatements ["((getpos (thislist select 0)) select 2 < 0.2)","ctmk072100=ctmk072100+1; hint format ['%2 sauts réussis',(getpos (thislist select 0)) select 2,ctmk072100];['mk072100'] execVM 'z_missions\mk072100.sqf'",""];
+_t49 setTriggerStatements ["((getpos (thislist select 0)) select 2 < 0.2)","ctmk072100=ctmk072100+1; hint format ['%2 sauts réussis',(getpos (thislist select 0)) select 2,ctmk072100];['mk072100'] execVM 'z_missions\mk072100ok.sqf'",""];
 _t49 setTriggerActivation ["WEST","PRESENT",True];
 
 

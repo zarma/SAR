@@ -31,13 +31,15 @@ class Mission
 		"CAWheeled",
 		"CATracked",
 		"CAWheeled2_LAV25",
-		"cawheeled2_m1114_armored"
+		"cawheeled2_m1114_armored",
+		"CAAir2"
 	};
 	addOnsAuto[]=
 	{
 		"cacharacters2",
 		"CA_Modules_ARTY",
 		"ca_modules_functions",
+		"CAAir2",
 		"camisc3",
 		"CAAir",
 		"CAAir2_UH1Y",
@@ -672,11 +674,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={11556.186,323.25256,11371.709};
-					azimut=-111.2717;
+					position[]={10731.758,172.41649,13681.483};
+					azimut=-111.272;
+					special="FLY";
 					id=79;
 					side="EAST";
-					vehicle="Ins_Soldier_Sab";
+					vehicle="Mi24_V";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -1383,7 +1386,7 @@ class Mission
 		};
 		class Item21
 		{
-			position[]={10139.453,307.47015,11782.742};
+			position[]={9640.5313,86.088852,13520.775};
 			name="mk096018";
 			type="Empty";
 		};

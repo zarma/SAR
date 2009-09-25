@@ -288,3 +288,56 @@ _this setWaypointFormation "DIAMOND";
 _this setWaypointSpeed "FULL";
 _this setWaypointBehaviour "COMBAT";
 _waypoint_4 = _this;
+
+_vehicle_33 = objNull;
+if (true) then
+{
+  _this = createVehicle ["RULaunchersBox", [9656.1289, 13554.854], [], 0, "CAN_COLLIDE"];
+  _vehicle_33 = _this;
+  _this setDir -21.715328;
+  _this setVehicleVarName "mk096018c1";
+  mk096018c1 = _this;
+};
+
+_vehicle_35 = objNull;
+if (true) then
+{
+  _this = createVehicle ["RULaunchersBox", [9649.0459, 13551.825], [], 0, "CAN_COLLIDE"];
+  _vehicle_35 = _this;
+  _this setDir -22.367998;
+  _this setVehicleVarName "mk096018c2";
+  mk096018c2 = _this;
+};
+
+
+_vehicle_38 = objNull;
+if (true) then
+{
+  _this = createVehicle ["KamazReammo", [9653.9834, 13534.512], [], 0, "CAN_COLLIDE"];
+  _vehicle_38 = _this;
+  _this setDir 69.967186;
+  _this setVehicleVarName "mk096018c3";
+  mk096018c3 = _this;
+};
+
+_vehicle_40 = objNull;
+if (true) then
+{
+  _this = createVehicle ["KamazReammo", [9711.8906, 13558.736], [], 0, "CAN_COLLIDE"];
+  _vehicle_40 = _this;
+  _this setDir 152.97414;
+  _this setVehicleVarName "mk096018c4";
+  mk096018c4 = _this;
+};
+
+
+
+
+// triggers liés aux véhicules
+_mpos = markerPos "mk115040";
+call compile format["ok%1=false",_mk];
+call compile format["t%1=createTrigger['EmptyDetector',_mpos]",_mk];
+call compile format["t%1 setTriggerArea [350, 350, 0, false]",_mk];
+call compile format["t%1 setTriggerActivation ['WEST', 'PRESENT', true]",_mk];
+call compile format["t%1 setTriggerStatements['!alive mk096018c1 && !alive mk096018c2 && !alive mk096018c3 && !alive mk096018c4', '[''mk115040''] execVM ''z_scripts\z_taskok.sqf'';', 'ok%1=false']",_mk];
+
