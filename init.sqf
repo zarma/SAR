@@ -11,6 +11,10 @@ Hint format ["Difficulty %1",Difficulty] ;
 
 ZF_stringToConfig  = compile preprocessFile "ca\modules\ambient_combat\data\scripts\functions\convertGroupStringToConfig.sqf";
 Z_fnc_burn = compile preprocessFile "\ca\Data\ParticleEffects\SCRIPTS\destruction\burn.sqf";
+
+Z_fnc_randomArray = compile preprocessFile "z_fnc\z_fn_randomarray.sqf";
+
+
 // distance de vue
 viewDist = 3000;
 setViewDistance(viewDist);

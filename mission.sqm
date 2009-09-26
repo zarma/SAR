@@ -39,7 +39,6 @@ class Mission
 		"cacharacters2",
 		"CA_Modules_ARTY",
 		"ca_modules_functions",
-		"CAAir2",
 		"camisc3",
 		"CAAir",
 		"CAAir2_UH1Y",
@@ -674,12 +673,12 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={10731.758,172.41649,13681.483};
+					position[]={9622.1387,86.664154,13530.419};
 					azimut=-111.272;
-					special="FLY";
+					special="NONE";
 					id=79;
 					side="EAST";
-					vehicle="Mi24_V";
+					vehicle="Ins_Soldier_Sab";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
