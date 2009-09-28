@@ -14,6 +14,8 @@ Z_fnc_burn = compile preprocessFile "\ca\Data\ParticleEffects\SCRIPTS\destructio
 
 Z_fnc_randomArray = compile preprocessFile "z_fnc\z_fn_randomarray.sqf";
 z_fnc_loadereasy = compile preprocessFile "z_fnc\z_fn_loadereasy.sqf";
+z_fnc_loadermedium = compile preprocessFile "z_fnc\z_fn_loadermedium.sqf";
+z_fnc_loaderhard = compile preprocessFile "z_fnc\z_fn_loaderhard.sqf";
 z_fnc_loadercheck = compile preprocessFile "z_fnc\z_fn_loadercheck.sqf";
 
 

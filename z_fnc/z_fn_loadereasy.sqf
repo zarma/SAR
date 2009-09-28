@@ -7,6 +7,7 @@
 private ["_return"];
 [(side player),"HQ"] sidechat format["missions_faciles_chargees  %1 %2 ", missions_faciles_chargees,nb_missions_faciles_chargees];
 [(side player),"HQ"] sidechat format["missionsf  %1 %2 ", missionsf,Z_MAX_MISSIONS_FACILES];
+
 if (nb_missions_faciles_chargees < Z_MAX_MISSIONS_FACILES) then 
 {
   missions_faciles_chargees = [missions_faciles_chargees, missionsf select 0] call BIS_fnc_arrayPush;
