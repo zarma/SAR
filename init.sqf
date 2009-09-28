@@ -13,6 +13,8 @@ ZF_stringToConfig  = compile preprocessFile "ca\modules\ambient_combat\data\scri
 Z_fnc_burn = compile preprocessFile "\ca\Data\ParticleEffects\SCRIPTS\destruction\burn.sqf";
 
 Z_fnc_randomArray = compile preprocessFile "z_fnc\z_fn_randomarray.sqf";
+z_fnc_loadereasy = compile preprocessFile "z_fnc\z_fn_loadereasy.sqf";
+z_fnc_loadercheck = compile preprocessFile "z_fnc\z_fn_loadercheck.sqf";
 
 
 // distance de vue
