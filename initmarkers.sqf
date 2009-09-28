@@ -49,7 +49,7 @@ missionsd = [["mk096018","mk115040"]] call Z_fnc_randomArray; //difficiles
 
 
 switch (Difficulty) do {
-//	case 0: {_missions = _missionsf+_missionsm+_missionsd;};
+  case 0: {_missions = missionsm+missionsd;};
 	case 1: {missions = missionsf;};
 	case 2: {missions = missionsm;};
 	case 3: {missions = missionsd;};
