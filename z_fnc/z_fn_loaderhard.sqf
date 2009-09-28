@@ -5,8 +5,9 @@
 //////////////////////////////////////////////////////////////////
 
 private ["_return"];
-[(side player),"HQ"] sidechat format["missions_difficiles_chargees  %1 %2 ", missions_difficiles_chargees,nb_missions_difficiles_chargees];
-[(side player),"HQ"] sidechat format["missionsd  %1 %2 ", missionsd,Z_MAX_MISSIONS_DIFFICILES];
+if (!isServer) exitWith{};
+//[(side player),"HQ"] sidechat format["missions_difficiles_chargees  %1 %2 ", missions_difficiles_chargees,nb_missions_difficiles_chargees];
+//[(side player),"HQ"] sidechat format["missionsd  %1 %2 ", missionsd,Z_MAX_MISSIONS_DIFFICILES];
 
 if (nb_missions_difficiles_chargees < Z_MAX_MISSIONS_DIFFICILES) then 
 {

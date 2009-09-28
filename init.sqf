@@ -46,4 +46,4 @@ centerG = createCenter resistance;
 centerC = createCenter civilian;
 
 // initialization of markers array
-nul=[] execVM "initmarkers.sqf";
+nul=[] execVM "initmissions.sqf";

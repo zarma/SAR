@@ -2,7 +2,7 @@
 // Function file for Armed Assault 2
 // Created by: =[A*C]= Z
 //////////////////////////////////////////////////////////////////
-private ["_missions","_missionsT","_missions1","_missions2","_missions3"];
+
 
 Z_MAX_MISSIONS_DIFFICILES = 1;
 Z_MAX_MISSIONS_MOYENNES = 1;
@@ -31,7 +31,7 @@ markers = [
   "mk128054",
   "mk096018",
   "mk081038",
-  "mk121026",
+  "mk121026", 
   "mk072100",
   "mk067097"
   ];
@@ -41,12 +41,6 @@ missionsf = [["mk017124","mk036131","mk072100"]] call Z_fnc_randomArray;//facile
 missionsm = [["mk098067","mk104127"]] call Z_fnc_randomArray; // moyennes
 missionsd = [["mk096018","mk115040"]] call Z_fnc_randomArray; //difficiles
 
-////// debug ///////
-// initialization of markers array
-//nul=[] execVM "testmarkers.sqf";
-//_mission = "mk036131";
-//_mission = "mk017124";
-
 
 switch (Difficulty) do {
   case 0: {_missions = missionsm+missionsd;};
@@ -55,27 +49,15 @@ switch (Difficulty) do {
 	case 3: {missions = missionsd;};
 };
 
+format ["missionsf %1",missionsf] call z_smsg;
+format ["missionsm %1",missionsm] call z_smsg;
+format ["missionsd %1",missionsd] call z_smsg;
 
 // chargeur de missions
 
 call z_fnc_loadercheck;
-/*
-if (count missions_chargees < Z_MAX_MISSIONS) then
-{
-  if (Difficulty==0) then // difficulté variable
-  {
- 
+//call compile format["['%1'] execVM 'z_missions\%1.sqf';","mk104127"];
 
-  }
-  else
-  {
-  missions_chargees = [missions_chargees, missions select 0] call BIS_fnc_arrayPush;
-  missions = [_missions, 0]  call BIS_fnc_removeIndex;
-  [(side player),"HQ"] sidechat format["missions_chargees  %1  ", missions_chargees];    
-  }
-  ;
-};
-*/
 //_missions =["mk072100"];
 
 //[(side player),"HQ"] sidechat format["_missions %1  %2", _missions,Difficulty];

@@ -2,7 +2,7 @@
 // Function file for Armed Assault 2
 // Created by: =[A*C]= Z
 //////////////////////////////////////////////////////////////////
-if !(isserver) exitwith {};
+
 _mk = _this select 0;
 
 [(side player),"HQ"] sidechat format["marker %1", _mk];

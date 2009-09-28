@@ -1,4 +1,4 @@
-if !(isserver) exitwith {};
+
 /////// Début GOLF
 // id 6;
 

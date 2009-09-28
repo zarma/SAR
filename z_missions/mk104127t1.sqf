@@ -1,4 +1,4 @@
-if !(isserver) exitwith {};
+
 /////// Gestion des tâches
 private ["_task"];
 _task = mk104127t;

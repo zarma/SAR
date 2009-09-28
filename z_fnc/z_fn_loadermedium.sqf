@@ -5,8 +5,9 @@
 //////////////////////////////////////////////////////////////////
 
 private ["_return"];
-[(side player),"HQ"] sidechat format["missions_moyennes_chargees  %1 %2 ", missions_moyennes_chargees,nb_missions_moyennes_chargees];
-[(side player),"HQ"] sidechat format["missionsm  %1 %2 ", missionsm,Z_MAX_MISSIONS_MOYENNES];
+
+//[(side player),"HQ"] sidechat format["missions_moyennes_chargees  %1 %2 ", missions_moyennes_chargees,nb_missions_moyennes_chargees];
+//[(side player),"HQ"] sidechat format["missionsm  %1 %2 ", missionsm,Z_MAX_MISSIONS_MOYENNES];
 
 if (nb_missions_moyennes_chargees < Z_MAX_MISSIONS_MOYENNES) then 
 {

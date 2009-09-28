@@ -5,7 +5,7 @@
 
 _mk = _this select 0;
 
-//[(side player),"HQ"] sidechat format["marker %1", _mk];
+[(side player),"HQ"] sidechat format["marker %1", _mk];
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
@@ -29,10 +29,10 @@ _cible1 setSkill 0.60000002;
 sleep 2;
 // id 
 ctmk072100=0;
-_t49 = createTrigger["EmptyDetector",_pos];
-_t49 setTriggerArea [4.5,4.5,0,False];
-_t49 setTriggerStatements ["((getpos (thislist select 0)) select 2 < 0.2)","ctmk072100=ctmk072100+1; hint format ['%2 sauts réussis',(getpos (thislist select 0)) select 2,ctmk072100];['mk072100'] execVM 'z_missions\mk072100ok.sqf'",""];
-_t49 setTriggerActivation ["WEST","PRESENT",True];
+mk072100trig1 = createTrigger["EmptyDetector",_pos];
+mk072100trig1 setTriggerArea [4.5,4.5,0,False];
+mk072100trig1 setTriggerStatements ["((getpos (thislist select 0)) select 2 < 0.2)","ctmk072100=ctmk072100+1; hint format ['%2 sauts réussis',(getpos (thislist select 0)) select 2,ctmk072100];['mk072100'] execVM 'z_missions\mk072100ok.sqf'",""];
+mk072100trig1 setTriggerActivation ["WEST","PRESENT",True];
 
 
 // marker
