@@ -2,7 +2,7 @@
 /////// Gestion des tâches
 private ["_task"];
 _task = mk104127t;
-[(side player),'HQ'] sidechat format["Tâche = %1.",_task];
+
 switch (_task) do {
 case 1:
   {

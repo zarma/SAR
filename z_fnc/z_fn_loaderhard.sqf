@@ -3,9 +3,9 @@
 // Created by: =[A*C]= Z
 // Cette fonction gère les missions difficiles
 //////////////////////////////////////////////////////////////////
+//if (!isServer) exitWith{};
+if (count missionsd==0) exitWith{};
 
-private ["_return"];
-if (!isServer) exitWith{};
 //[(side player),"HQ"] sidechat format["missions_difficiles_chargees  %1 %2 ", missions_difficiles_chargees,nb_missions_difficiles_chargees];
 //[(side player),"HQ"] sidechat format["missionsd  %1 %2 ", missionsd,Z_MAX_MISSIONS_DIFFICILES];
 

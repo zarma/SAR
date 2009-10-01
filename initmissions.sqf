@@ -3,9 +3,9 @@
 // Created by: =[A*C]= Z
 //////////////////////////////////////////////////////////////////
 
-
-Z_MAX_MISSIONS_DIFFICILES = 1;
-Z_MAX_MISSIONS_MOYENNES = 1;
+//if (!isServer) exitWith{};
+Z_MAX_MISSIONS_DIFFICILES = 2; // debug passer a 1
+Z_MAX_MISSIONS_MOYENNES = 2; // debug passer a 1
 Z_MAX_MISSIONS_FACILES = 2;
 Z_MAX_MISSIONS = 2;
 missions_chargees = [];
@@ -48,13 +48,13 @@ switch (Difficulty) do {
 	case 2: {missions = missionsm;};
 	case 3: {missions = missionsd;};
 };
-
+/*
 format ["missionsf %1",missionsf] call z_smsg;
 format ["missionsm %1",missionsm] call z_smsg;
 format ["missionsd %1",missionsd] call z_smsg;
-
+*/
 // chargeur de missions
-
+format ["initmission"] spawn z_smsg;
 call z_fnc_loadercheck;
 //call compile format["['%1'] execVM 'z_missions\%1.sqf';","mk104127"];
 

@@ -4,10 +4,10 @@
 // Cette fonction gère les missions faciles
 //////////////////////////////////////////////////////////////////
 //if (!isServer) exitWith{};
-
-
-format ["nb_missions_faciles_chargees %1",nb_missions_faciles_chargees] call z_smsg;
-format ["Z_MAX_MISSIONS_FACILES %1",Z_MAX_MISSIONS_FACILES] call z_smsg;
+if (count missionsf==0) exitWith{};
+format ["loadereasy %1 %2 %3",nb_missions_faciles_chargees,Z_MAX_MISSIONS_FACILES,_missionf] call z_smsg;
+//format ["nb_missions_faciles_chargees %1",nb_missions_faciles_chargees] call z_smsg;
+//format ["Z_MAX_MISSIONS_FACILES %1",Z_MAX_MISSIONS_FACILES] call z_smsg;
 if (nb_missions_faciles_chargees < Z_MAX_MISSIONS_FACILES) then 
 {
   missions_faciles_chargees = [missions_faciles_chargees, missionsf select 0] call BIS_fnc_arrayPush;

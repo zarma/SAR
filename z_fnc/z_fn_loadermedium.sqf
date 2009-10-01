@@ -3,8 +3,8 @@
 // Created by: =[A*C]= Z
 // Cette fonction gère les missions moyennes
 //////////////////////////////////////////////////////////////////
-
-private ["_return"];
+//if (!isServer) exitWith{};
+if (count missionsm==0) exitWith{};
 
 //[(side player),"HQ"] sidechat format["missions_moyennes_chargees  %1 %2 ", missions_moyennes_chargees,nb_missions_moyennes_chargees];
 //[(side player),"HQ"] sidechat format["missionsm  %1 %2 ", missionsm,Z_MAX_MISSIONS_MOYENNES];

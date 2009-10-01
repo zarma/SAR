@@ -1,0 +1,19 @@
+class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={2556.811279,13.860000,2613.418457};
+			a=2.000000;
+			b=2.000000;
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="(sap1 distance reptruck1) < 20";
+			expActiv="act1 = sap1  addAction [""Monter bivouac"", ""bivouac.sqs"",reptruck1,-3,false]";
+			expDesactiv="sap1 removeAction act1";
+			class Effects
+			{
+				soundDet="owl";
+			};
+		};

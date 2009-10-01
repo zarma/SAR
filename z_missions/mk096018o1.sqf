@@ -1,5 +1,4 @@
-
-
+if (!isServer) exitWith{};
 
 _vehicle_5 = objNull;
 if (true) then
@@ -24,8 +23,6 @@ if (true) then
   _vehicle_8 = _this;
   _this setDir -37.707008;
 };
-
-setDate [1985, 5, 10, 12, 30];
 
 _vehicle_14 = objNull;
 if (true) then
@@ -149,16 +146,6 @@ if (true) then
   _vehicle_23 = _this;
   _this setDir 254.60352;
 };
-/*
-_vehicle_27 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Ins_WarfareBBarracks", [9620.0967, 13541.557], [], 0, "CAN_COLLIDE"];
-  _vehicle_27 = _this;
-  _this setDir 49.256489;
-};
-*/
-//_objectComposition_1 = [[9598.6826, 13532.448], 156.40874, "AntiAir1_RU"] call (compile (preprocessFileLineNumbers "ca\modules\dyno\data\scripts\objectmapper.sqf"));
 _objectComposition_1 = [[9598, 13532], 156.40874, "AntiAir1_RU"] call (compile (preprocessFileLineNumbers "ca\modules\dyno\data\scripts\objectmapper.sqf"));
 
 _objectComposition_2 = [[9616.9336, 13491.027], -173.85924, "WeaponsStore1_RU"] call (compile (preprocessFileLineNumbers "ca\modules\dyno\data\scripts\objectmapper.sqf"));

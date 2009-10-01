@@ -22,13 +22,16 @@ Sept civils sont morts à la suite du bombardement par un de nos drônes d''une 
 ";
 call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
-// objets
 
-mk098067o1 = compile preprocessFile "z_missions\mk098067o1.sqf"; // placement des objets
-nil = [] call mk098067o1;
+// marker
+_mk setMarkerTypeLocal "Join";
+_mk  setMarkerColorLocal "ColorRed";
+_mk  setMarkerTextLocal _mk;
 
-mk098067h1 = compile preprocessFile "z_missions\mk098067h1.sqf"; // hostiles 
-nil = [] call mk098067h1;
+// server
+
+mk098067s1 = compile preprocessFile "z_missions\mk098067s1.sqf"; 
+nil = [] spawn mk098067s1;
 
 
 
@@ -38,7 +41,3 @@ sleep 2;
 
 
 
-// marker
-_mk setMarkerTypeLocal "Join";
-_mk  setMarkerColorLocal "ColorRed";
-_mk  setMarkerTextLocal _mk;

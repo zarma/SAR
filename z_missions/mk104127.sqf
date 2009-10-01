@@ -21,27 +21,37 @@ Sauter sur la centrale électrique au nord de Elektrozavodsk.
 ";
 call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
-// objets
 
-mk104127g1 = compile preprocessFile "z_missions\mk104127g1.sqf"; // Golf
-nil = [] spawn mk104127g1;
 
-mk104127h1 = compile preprocessFile "z_missions\mk104127h1.sqf"; // Hostiles
-nil = [] spawn mk104127h1;
+// marker
+_mk setMarkerType "Join";
+_mk  setMarkerColor "ColorRed";
+_mk  setMarkerText _mk;
 
-mk104127d1 = compile preprocessFile "z_missions\mk104127d1.sqf"; // Décor
-nil = [] spawn mk104127d1;
+// server
 
-mk104127c1 = compile preprocessFile "z_missions\mk104127c1.sqf"; // cache armes
-nil = [] spawn mk104127c1;
+mk104127s1 = compile preprocessFile "z_missions\mk104127s1.sqf"; // placement des objets
+nil = [] spawn mk104127s1; 
 
 mk104127t1 = compile preprocessFile "z_missions\mk104127t1.sqf"; // gestion spécifique des tâches
 
 
 
-sleep 2;
+sleep 10;
+
+
+
 // Triggers
 bmk104127=0;
+// id 
+_pos = [10425.414, 2579.2412, 0];
+_this = createTrigger["EmptyDetector",_pos];
+_this setTriggerArea [10,10,0,False];
+_stmt = "hint 'ok';_id = player addaction ['Fouiller véhicule', 'z_scripts\z_fouille_objet.sqf', [mk104127golf], 1, false, false];";
+//_stmt = "hint 'ok';";
+_this setTriggerStatements ["player distance mk104127golf < 4)",_stmt,""];
+_this setTriggerActivation ["WEST","PRESENT",True];
+
 // id 
 _pos = [10425.414, 2579.2412, 0];
 _t67 = createTrigger["EmptyDetector",_pos];
@@ -65,8 +75,3 @@ _t69 setTriggerArea [5,2,-15.048,True];
 _t69 setTriggerStatements ["this && alive hooker1","",""];
 _t69 setTriggerActivation ["WEST","PRESENT",True];
 
-
-// marker
-_mk setMarkerTypeLocal "Join";
-_mk  setMarkerColorLocal "ColorRed";
-_mk  setMarkerTextLocal _mk;

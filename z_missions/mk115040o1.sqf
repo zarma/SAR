@@ -1,3 +1,4 @@
+if (!isServer) exitWith{};
 _vehicle_4 = objNull;
 /*if (true) then
 {
