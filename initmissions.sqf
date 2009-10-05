@@ -53,8 +53,10 @@ format ["missionsf %1",missionsf] call z_smsg;
 format ["missionsm %1",missionsm] call z_smsg;
 format ["missionsd %1",missionsd] call z_smsg;
 */
+zserverinitialised=true;
+publicVariable "zserverinitialized";
 // chargeur de missions
-format ["initmission"] spawn z_smsg;
+
 call z_fnc_loadercheck;
 //call compile format["['%1'] execVM 'z_missions\%1.sqf';","mk104127"];
 

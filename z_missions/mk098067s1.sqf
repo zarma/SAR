@@ -16,6 +16,7 @@ if (true) then
   mk098067c1 = createVehicle ["GuerillaCacheBox", [9077.3213, 8041.4844], [], 0, "CAN_COLLIDE"];
   mk098067c1 setDir 187.13234;
   nil=[mk098067c1,5,0.8] execVM "z_scripts\z_piege.sqf";
+  publicVariable mk098067c1;
 };
 
 
@@ -143,3 +144,17 @@ _max_dist_between_waypoints = 25;
 _pos = getpos _unit_2;
 //[(side player),"HQ"] sidechat format["pos %1", _pos];
 [_group_1, (_pos), _max_dist_between_waypoints] call BIS_fnc_taskPatrol;
+
+sleep 20;
+// Triggers
+mk098067st=0;
+publicVariable "mk098067st";
+_mpos= getpos mk098067c1;
+format ["_mpos %1",_mpos] call z_smsg;
+call compile format["ok%1=false",_mk];
+call compile format["t%1=createTrigger['EmptyDetector',_mpos]",_mk];
+call compile format["t%1 setTriggerActivation ['WEST', 'PRESENT', true]",_mk];
+call compile format["t%1 setTriggerStatements['!alive mk098067c1', 'mk098067st=1;publicVariable ''mk098067st'';', 'ok%1=false']",_mk];
+
+ 
+//// fin server

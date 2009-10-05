@@ -5,32 +5,46 @@ waituntil {!isnil "bis_fnc_init"};
 _max_dist_between_waypoints = 50;
 
 _pos = getMarkerPos "mkp1";
-_grp1 = [(_pos),east,12] call bis_fnc_spawngroup;
+_classString = "INS_InfSquad";
+_class = _classString call ZF_stringToConfig;
+_grp1 = [_pos, east, _class] call BIS_fnc_spawnGroup;
 [_grp1, (_pos), _max_dist_between_waypoints] call BIS_fnc_taskPatrol;
 
 _pos = getMarkerPos "mkp2";
-_grp2 = [(_pos),east,12] call bis_fnc_spawngroup;
+_classString = "INS_MilitiaSquad";
+_class = _classString call ZF_stringToConfig;
+_grp2 = [_pos, east, _class] call BIS_fnc_spawnGroup;
 [_grp2, (_pos), _max_dist_between_waypoints] call BIS_fnc_taskPatrol;
 
 _pos = getMarkerPos "mkp3";
-_grp3 = [(_pos),east,12] call bis_fnc_spawngroup;
+_classString = "INS_InfSquad";
+_class = _classString call ZF_stringToConfig;
+_grp1 = [_pos, east, _class] call BIS_fnc_spawnGroup;
 [_grp3, (_pos), _max_dist_between_waypoints] call BIS_fnc_taskPatrol;
 
 _pos = getMarkerPos "mkp4";
-_grp4 = [(_pos),east,12] call bis_fnc_spawngroup;
+_classString = "INS_InfSquad";
+_class = _classString call ZF_stringToConfig;
+_grp1 = [_pos, east, _class] call BIS_fnc_spawnGroup;
 [_grp4, (_pos), _max_dist_between_waypoints] call BIS_fnc_taskPatrol;
 
 _pos = getMarkerPos "mkp5";
-_grp5 = [(_pos),east,12] call bis_fnc_spawngroup;
+_classString = "INS_InfSquad";
+_class = _classString call ZF_stringToConfig;
+_grp1 = [_pos, east, _class] call BIS_fnc_spawnGroup;
 [_grp5, (_pos), _max_dist_between_waypoints] call BIS_fnc_taskPatrol;
 
 _pos = getMarkerPos "mkp6";
-_grp6 = [(_pos),east,12] call bis_fnc_spawngroup;
+_classString = "INS_InfSquad";
+_class = _classString call ZF_stringToConfig;
+_grp1 = [_pos, east, _class] call BIS_fnc_spawnGroup;
 [_grp6, (_pos), _max_dist_between_waypoints] call BIS_fnc_taskPatrol;
 
 
 _pos = getMarkerPos "mkp7";
-_grp7 = [(_pos),east,12] call bis_fnc_spawngroup;
+_classString = "INS_InfSquad";
+_class = _classString call ZF_stringToConfig;
+_grp1 = [_pos, east, _class] call BIS_fnc_spawnGroup;
 [_grp7, (_pos), _max_dist_between_waypoints] call BIS_fnc_taskPatrol;
 
 

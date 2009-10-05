@@ -28,6 +28,5 @@ if (z_fouille_etat == 1) then
 {
 _obj setVariable ["fouille", 1, true];
 "Fouille terminée" call z_smsg;
-}
-;
-
+};
+player removeAction _stop;

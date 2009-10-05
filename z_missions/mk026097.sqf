@@ -9,9 +9,7 @@ _mk = _this select 0;
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-_shorttext ="
-Elimination.
-";
+_shorttext ="Elimination.";
 _longtext = "
 Rejoignez Zelenogorsk.
 <br/>Trouvez et détruisez Victor.

@@ -9,7 +9,9 @@ if (!isServer) exitWith{};
   mk104127golf =  createVehicle ["VWGolf", _pos,[],0,"CAN_COLLIDE"];
   mk104127golf setPos _pos;
   mk104127golf setSkill 0.60000002;
-  mk104127golf setVariable ["fouille", 0, true]; 
+  mk104127golf setVariable ["fouille", 0, true];
+  mk104127golf setVehicleInit "this addaction ['Fouiller véhicule', 'z_scripts\z_fouille_objet.sqf', [this], 1, false, false];";
+  processInitCommands;
   publicVariable "mk104127golf";
   grp5 = createGroup centerC;
   _this = grp5 createUnit ["Rocker3", [10176.865, 1830.6976, 0], [], 0, "CAN_COLLIDE"];
@@ -91,12 +93,7 @@ if (!isServer) exitWith{};
   _wp17 setwaypointtype "MOVE";
   
   // fin déplacement de la GOLF
-  
-  _this = createTrigger ["EmptyDetector", [30, 30]];
-  _this setTriggerType "SWITCH";
-  _this setTriggerStatements ["(mk104127golf getVariable 'fouille')==1;", "['mk104127'] execVM 'z_scripts\z_taskok.sqf'", ""];
-  _trigger_1 = _this;
-  
+    
   /////// Fin GOLF
   
   _pos = [10470.068, 2023.3813];

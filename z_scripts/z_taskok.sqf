@@ -33,4 +33,4 @@ nb_missions_difficiles_chargees = nb_missions_difficiles_chargees - 1;
 };
 
 
-if (true) exitWith {};
+//if (true) exitWith {};

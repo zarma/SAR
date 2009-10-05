@@ -64,7 +64,7 @@ class Mission
 	randomSeed=12495445;
 	class Intel
 	{
-		briefingName="co20-z-blue-002-SAR-v0.63";
+		briefingName="co20-z-blue-002-SAR-v0.65";
 		briefingDescription="Operation Enduring Freedom Tchernarus";
 		resistanceEast=1;
 		startWeather=0.45347571;
@@ -1434,7 +1434,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			position[]={4359.7583,337.65112,11365.903};
@@ -1506,6 +1506,22 @@ class Mission
 			expActiv="onMapSingleClick ""player setPos _pos; onMapSingleClick """""""";"";";
 			class Effects
 			{
+			};
+		};
+		class Item5
+		{
+			position[]={4691.3062,243.90669,12029.156};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="local player && zserverinitialised";
+			expActiv="nil = [] execVM 'z_scripts\z_clientside.sqf';";
+			class Effects
+			{
+				track="Track08_Harvest_Red";
+				titleType="TEXT";
+				titleEffect="PLAIN DOWN";
+				title="Operation Enduring Freedom Tchernarus by =[A*C]= Z";
 			};
 		};
 	};

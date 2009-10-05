@@ -9,9 +9,7 @@ _mk = _this select 0;
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-_shorttext ="
-Saut de précision
-";
+_shorttext ="Saut de précision";
 _longtext = "
 Sauter sur le cible avec la plus grande précision possible.
 <br/>Pour valider l''objectif il faut réussir 6 sauts.
