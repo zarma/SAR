@@ -64,7 +64,7 @@ class Mission
 	randomSeed=12495445;
 	class Intel
 	{
-		briefingName="co20-z-blue-002-SAR-v0.65";
+		briefingName="co20-z-blue-002-OEFT-v0.65";
 		briefingDescription="Operation Enduring Freedom Tchernarus";
 		resistanceEast=1;
 		startWeather=0.45347571;

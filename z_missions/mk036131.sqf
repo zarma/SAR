@@ -6,7 +6,7 @@
 Private ["_mk"];
 _mk = _this select 0;
 
-[(side player),"HQ"] sidechat format["marker %1", _mk];
+[(side player),"HQ"] sidechat format["mission %1", _mk];
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];

@@ -5,7 +5,7 @@
 
 _mk = _this select 0;
 
-//[(side player),"HQ"] sidechat format["marker %1", _mk];
+[(side player),"HQ"] sidechat format["mission %1", _mk];
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Cherchez des armes'];",_mk];
@@ -128,10 +128,7 @@ _this setTriggerStatements ["!alive mk098067c1;", "mk098067st=1;publicVariable '
 
 };
 ////// Fin server
-/*
-mk098067s1 = compile preprocessFile "z_missions\mk098067s1.sqf"; 
-nil = [] spawn mk098067s1;
-*/
+
 "mk098067st" addPublicVariableEventHandler {
   if (mk098067st==1) then {
   ['mk098067'] execVM 'z_scripts\z_taskok.sqf';
