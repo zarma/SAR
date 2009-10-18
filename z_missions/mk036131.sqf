@@ -9,14 +9,15 @@ _mk = _this select 0;
 [(side player),"HQ"] sidechat format["mission %1", _mk];
 
 // Briefing
-call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-_shorttext ="Rejoingez le terminal de chargement.";
+call compile format["o%1 = player createsimpletask['Rejoingez la zone',of];",_mk];
+_shorttext ="  Rejoingez le terminal de chargement.";
 _longtext = "
 Rejoingez le terminal de chargement en fin de ligne de chemin de fer au sud de Komarovo'
 ";
 
 call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
+ztasks = ztasks + [[_mk,_shorttext,_longtext,"of"]];
 
 // marker
 _mk setMarkerTypeLocal "Join";
@@ -43,7 +44,7 @@ mk036131trig2 setTriggerActivation ["WEST","PRESENT",True];
 };
 
 "mk036131st" addPublicVariableEventHandler {
-  hint format ["mk036131st %1",mk036131st];
+//  hint format ["mk036131st %1",mk036131st];
   if (mk036131st==1) then {
   ['mk036131'] execVM 'z_scripts\z_taskok.sqf';
   };

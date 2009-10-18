@@ -1,6 +1,7 @@
 // by Xeno
 
 private ["_killed","_killer"];
+hint "checkkill";
 
 _killed = _this select 0;
 

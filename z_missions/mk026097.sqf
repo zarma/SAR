@@ -8,8 +8,8 @@ _mk = _this select 0;
 [(side player),"HQ"] sidechat format["mission %1", _mk];
 
 // Briefing
-call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-_shorttext ="Elimination.";
+call compile format["o%1 = player createsimpletask['Rejoingez la zone',om];",_mk];
+_shorttext ="  Elimination.";
 _longtext = "
 Rejoignez Zelenogorsk.
 <br/>Trouvez et détruisez Victor.
@@ -18,6 +18,7 @@ Rejoignez Zelenogorsk.
 ";
 call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
+ztasks = ztasks + [[_mk,_shorttext,_longtext,"om"]];
 // objets
 
 

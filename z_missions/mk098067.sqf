@@ -8,8 +8,8 @@ _mk = _this select 0;
 [(side player),"HQ"] sidechat format["mission %1", _mk];
 
 // Briefing
-call compile format["o%1 = player createsimpletask['Cherchez des armes'];",_mk];
-_shorttext ="Cache d'armes";
+call compile format["o%1 = player createsimpletask['Cherchez des armes',om];",_mk];
+_shorttext ="  Cache d'armes";
 _longtext = "
 Sauter au sud de Gorka.
 <br/>Rattisser la forêt noire.
@@ -21,7 +21,7 @@ Sept civils sont morts à la suite du bombardement par un de nos drônes d'une m
 
 call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
-
+ztasks = ztasks + [[_mk,_shorttext,_longtext,"om"]];
 // marker
 _mk setMarkerTypeLocal "Join";
 _mk  setMarkerColorLocal "ColorRed";

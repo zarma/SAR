@@ -1,19 +1,32 @@
 //definitions des notes
-_d3 = player createDiaryRecord["Diary", ["Briefing", "Vous allez participer à une mission entrainement. <br/><br/>
-Vous serez parachutés en différents point du pays.<br/>
-Vous devrez vous repérer et signaler votre position aux équipes de sauvetage. Tout en restant le plus discret possible.<br/>
-Les instructeurs iront interroger les civils pour vérifier votre capacité à rester furtifs.<br/>
-Les équipes de sauvetages survoleront la zone à votre recherche.<br/>
+_d3 = player createDiaryRecord["Diary", ["Briefing", "Tchernarus. <br/><br/>
+Notre mission vise à maintenir et consolider la paix dans ce pays.<br/>
+La population est divisée entre pro russes et partisans de l'alliance avec l'OTAN.<br/>
+La situation est au bord de la guerre civile.<br/>
+De nombreuses armes circulent dans le pays et les incidents sont nombreux.<br/>
+<br/>
+Jusqu'à nouvel ordre nous allons nous familiariser avec le terrain et habituer la population à notre présence.<br/>
+Nous mènerons des opérations de police en particulier contre les caches d'armes et le trafic de drogue.<br/>
+<br/>
+La situation étant explosive nous ne devons commettre aucune bavure.<br/>
 "]];
 
 _d2 = player createDiaryRecord["Diary", ["Roles", "Seuls les pilotes peuvent piloter les hélicoptères.<br/>
-Vous pouvez sauter quand vous le souhaitez ou sur ordre de votre chef de groupe ou du pilote.<br/>
-La commande drop déclenche le parachutage des troupes à intervalles aléatoires.<br/>
 "]];
 
 _d1 = player createDiaryRecord["Diary", ["Informations",
-"Les equipes de sauvetage disposent d'Hélicoptères et d'un UAV.<br/><br/>
-Pour commander l'UAV vous devez vous diriger vers le poste de commandement.<br/>
+"Matériel disponible :<br/>
+- hélicoptères<br/>
+- mortiers<br/>
+- canons M119<br/>
+- blindés<br/>
+- HMMV<br/>
+<br/>
+Les trafficants peuvent être arrêtés : <br/>
+- par des tirs de semonce (le tireur doit être proche de la cible)
+- par des tirs sur les véhicules
+- il faut approcher les traficants pour les capturer
+<br/>
+<br/>
 Le réglage de la distance de vue est possible à l'hopital.<br/>
-Un conseil : soyez organisés !
 "]];

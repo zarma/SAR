@@ -8,11 +8,12 @@ _mk = _this select 0;
 [(side player),"HQ"] sidechat format["mission %1", _mk];
 
 // Briefing
-call compile format["o%1 = player createsimpletask['Destruction'];",_mk];
-_shorttext = "Détruire l'artillerie";
+call compile format["o%1 = player createsimpletask['Destruction',od];",_mk];
+_shorttext = "  Détruire l'artillerie";
 _longtext = "Trouver et détruiser les unités d'artillerie à proximité du mont Klein.";
 call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
+ztasks = ztasks + [[_mk,_shorttext,_longtext,"od"]];
 
 
 // marker
@@ -336,7 +337,6 @@ mk115040s1 = compile preprocessFile "z_missions\mk115040s1.sqf"; // placement de
 nil = [] spawn mk115040s1;
 */
 "mk115040st" addPublicVariableEventHandler {
- // hint format ["mk115040st %1",mk115040st];
   if (mk115040st==1) then {
   ['mk115040'] execVM 'z_scripts\z_taskok.sqf';
   };

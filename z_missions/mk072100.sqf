@@ -8,14 +8,15 @@ _mk = _this select 0;
 [(side player),"HQ"] sidechat format["mission %1", _mk];
 
 // Briefing
-call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-_shorttext ="Saut de précision";
+call compile format["o%1 = player createsimpletask['Rejoingez la zone',of];",_mk];
+_shorttext ="  Saut de précision";
 _longtext = "
 Sauter sur le cible avec la plus grande précision possible.
-<br/>Pour valider l''objectif il faut réussir 6 sauts.
+<br/>Pour valider l'objectif il faut réussir 6 sauts.
 ";
 call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
+ztasks = ztasks + [[_mk,_shorttext,_longtext,"of"]];
 // objets
 
 _pos = [7224.7603, 5331.3418];

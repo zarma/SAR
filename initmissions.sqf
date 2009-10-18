@@ -4,8 +4,8 @@
 //////////////////////////////////////////////////////////////////
 
 //if (!isServer) exitWith{};
-Z_MAX_MISSIONS_DIFFICILES = 2; // debug passer a 1
-Z_MAX_MISSIONS_MOYENNES = 2; // debug passer a 1
+Z_MAX_MISSIONS_DIFFICILES = 1; // debug passer a 1
+Z_MAX_MISSIONS_MOYENNES = 1; // debug passer a 1
 Z_MAX_MISSIONS_FACILES = 2;
 Z_MAX_MISSIONS = 2;
 missions_chargees = [];
@@ -35,9 +35,11 @@ markers = [
   "mk072100",
   "mk067097"
   ];
-  
+
+ztasks = [];
 missions =[];
-missionsf = [["mk017124","mk036131","mk072100"]] call Z_fnc_randomArray;//faciles
+missionsf = [["mk017124","mk036131","mk072100","mk116122"]] call Z_fnc_randomArray;//faciles
+missionsf = [["mk116122"]] call Z_fnc_randomArray;//debug
 missionsm = [["mk098067","mk104127"]] call Z_fnc_randomArray; // moyennes
 missionsd = [["mk096018","mk115040"]] call Z_fnc_randomArray; //difficiles
 
@@ -57,18 +59,30 @@ zserverinitialised=true;
 publicVariable "zserverinitialized";
 // chargeur de missions
 
+call compile format["od = player createsimpletask['Combat'];"];
+_shorttext ="Combat :";
+_longtext = "
+";
+call compile format["od setSimpleTaskDescription[_longtext, _shorttext,''];"];
+call compile format["om = player createsimpletask['Maintien de l''ordre'];"];
+_shorttext ="Maintien de l'ordre :";
+_longtext = "
+";
+call compile format["om setSimpleTaskDescription[_longtext, _shorttext,''];"];
+call compile format["of = player createsimpletask['Entraînement'];"];
+_shorttext ="Entraînement :";
+_longtext = "
+";
+call compile format["of setSimpleTaskDescription[_longtext, _shorttext,''];"];
+
 call z_fnc_loadercheck;
 //call compile format["['%1'] execVM 'z_missions\%1.sqf';","mk104127"];
 
 //_missions =["mk072100"];
 
 //[(side player),"HQ"] sidechat format["_missions %1  %2", _missions,Difficulty];
-//_townlist = nearestLocations [markerPos "mk026096", ["CityCenter"], 20000];
-//[(side player),"HQ"] sidechat format["_townlist %1  ", _townlist];
-/*{
-[(side player),"HQ"] sidechat format["town %1 : %2", _x,text _x];
-} forEach _townlist;
 
+/*
 {
 call compile format["['%1'] execVM 'z_missions\%1.sqf';",_x];
 } forEach _missions;

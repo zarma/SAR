@@ -12,7 +12,7 @@ if (_position == "driver") then {
 	if (_enterer_name != "USMC_Soldier_Pilot") then {
 		driver _vehicle action["Eject",_vehicle];
 	} else {
-	_enterer addAction ["Drop", "drop.sqf", [_enterer], -9, false, false,""];
+//	_enterer addAction ["Drop", "drop.sqf", [_enterer], -9, false, false,""];
 	};
 };
 

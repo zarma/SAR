@@ -3,7 +3,7 @@
 // Created by: =[A*C]= Z
 //////////////////////////////////////////////////////////////////
 Difficulty=Param1;
-Hint format ["Difficulty %1",Difficulty] ;
+//Hint format ["Difficulty %1",Difficulty] ;
 // permet de mettre le point de respawn au niveau du sol dans un batiment
 "respawn_west" setMarkerPosLocal [markerPos "respawn_west" select 0, markerPos "respawn_west" select 1, 0];
 

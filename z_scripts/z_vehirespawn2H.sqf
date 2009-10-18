@@ -9,7 +9,7 @@ _startpos = getpos _vehicle;
 _startdir = getdir _vehicle;
 _type = typeof _vehicle;
 
-_vehicle setVehicleInit "this addeventhandler [""getin"", {_this execVM ""z_scripts\z_checkhelipilot.sqf"";}]";
+_vehicle setVehicleInit "this addeventhandler [""getin"", {_this execVM ""z_scripts\z_checkhelipilot.sqf"";}];this addeventhandler [""getout"", {_this execVM ""z_scripts\z_getout.sqf"";}];";
 processInitCommands;
 
 while {true} do {
@@ -23,7 +23,7 @@ while {true} do {
 			_vehicle = _type createvehicle _startpos;
 			_vehicle setPosASL [_startpos select 0, _startpos select 1, 15.9];
 			_vehicle setdir _startdir;
-			_vehicle setVehicleInit "this addeventhandler [""getin"", {_this execVM ""z_scripts\z_checkhelipilot.sqf"";}]";
+			_vehicle setVehicleInit "this addeventhandler [""getin"", {_this execVM ""z_scripts\z_checkhelipilot.sqf"";}];this addeventhandler [""getout"", {_this execVM ""z_scripts\z_getout.sqf"";}];";
 			processInitCommands;
 		};
 	};

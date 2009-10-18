@@ -8,8 +8,8 @@ _mk = _this select 0;
 [(side player),"HQ"] sidechat format["mission %1", _mk];
 
 // Briefing
-call compile format["o%1 = player createsimpletask['Assaut camp insurgés.'];",_mk];
-_shorttext = "Assaut sur le camp des insurgés";
+call compile format["o%1 = player createsimpletask['Assaut camp insurgés.',od];",_mk];
+_shorttext = "  Assaut sur le camp des insurgés";
 _longtext = "
 La guérilla a installé un camp près du barrage de Pobeda.<br/>
 Nous savons qu'ils préparent une attaque d'envergure.<br/>
@@ -22,6 +22,7 @@ Que Dieu vous garde.<br/>
 ";
 call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
+ztasks = ztasks + [[_mk,_shorttext,_longtext,"od"]];
 
 
 // marker
@@ -29,9 +30,10 @@ _mk setMarkerTypeLocal "Join";
 _mk  setMarkerColorLocal "ColorRed";
 _mk  setMarkerTextLocal _mk;
 
-
+call compile format["%1objects=[]",_mk];
 ///////// server
 if (isServer) then{
+  
   _vehicle_5 = createVehicle ["UAZ_AGS30_INS", [9677.4092, 13553.571], [], 0, "CAN_COLLIDE"];
   _vehicle_5 setDir 29.549526;
 
@@ -242,7 +244,17 @@ call compile format["t%1=createTrigger['EmptyDetector',_mpos]",_mk];
 call compile format["t%1 setTriggerArea [350, 350, 0, false]",_mk];
 call compile format["t%1 setTriggerActivation ['WEST', 'PRESENT', true]",_mk];
 call compile format["t%1 setTriggerStatements['!alive mk096018c1 && !alive mk096018c2 && !alive mk096018c3 && !alive mk096018c4', 'mk096018st=1;publicVariable ''mk096018st'';', 'ok%1=false']",_mk];
-
+// sauvegarde des objets à gérer ultérieurement
+call compile format["%1objects = [%1objects, _group_1] call BIS_fnc_arrayPush;"];
+call compile format["%1objects = [%1objects, _group_2] call BIS_fnc_arrayPush;"];
+call compile format["%1objects = [%1objects, _group_3] call BIS_fnc_arrayPush;"];
+call compile format["%1objects = [%1objects, _group_4] call BIS_fnc_arrayPush;"];
+call compile format["%1objects = [%1objects, _group_5] call BIS_fnc_arrayPush;"];
+call compile format["%1objects = [%1objects, _grp1] call BIS_fnc_arrayPush;"];
+call compile format["%1objects = [%1objects, _grp2] call BIS_fnc_arrayPush;"];
+call compile format["%1objects = [%1objects, _grp3] call BIS_fnc_arrayPush;"];
+call compile format["%1objects = [%1objects, _grp4] call BIS_fnc_arrayPush;"];
+call compile format["publicVariable '%1objects' ;"];
 }; //// fin server
 ///////// end server
 /*
@@ -250,8 +262,9 @@ mk096018o1 = compile preprocessFile "z_missions\mk096018s1.sqf"; // placement de
 nil = [] spawn mk096018s1;
 */
 "mk096018st" addPublicVariableEventHandler {
-  hint format ["mk096018st %1",mk096018st];
+//  hint format ["mk096018st %1",mk096018st];
   if (mk096018st==1) then {
   ['mk096018'] execVM 'z_scripts\z_taskok.sqf';
+  hint format ["%1objects %1",_mk];
   };
 };

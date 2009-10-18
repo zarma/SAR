@@ -8,8 +8,8 @@ _mk = _this select 0;
 [(side player),"HQ"] sidechat format["mission %1", _mk];
 
 // Briefing
-call compile format["o%1 = player createsimpletask['Rejoingez la zone'];",_mk];
-_shorttext ="Renseignement";
+call compile format["o%1 = player createsimpletask['Rejoingez la zone',om];",_mk];
+_shorttext ="  Renseignement";
 _longtext = "
 Sauter sur la centrale électrique au nord de Elektrozavodsk.
 <br/>Nous cherchons une malette contenant un ordinateur.
@@ -19,6 +19,7 @@ Sauter sur la centrale électrique au nord de Elektrozavodsk.
 ";
 call compile format["o%1 setSimpleTaskDescription[_longtext, _shorttext, '%1'];",_mk];
 call compile format["o%1 setSimpleTaskDestination markerpos '%1';",_mk];
+ztasks = ztasks + [[_mk,_shorttext,_longtext,"om"]];
 
 
 // marker
