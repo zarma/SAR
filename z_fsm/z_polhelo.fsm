@@ -1,0 +1,316 @@
+/*%FSM<COMPILE "C:\Program Files\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, z_polhelo">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-355.718567,-899.425476,-265.718567,-849.425476,0.000000,"Init"};
+item1[] = {"air",4,218,-613.056946,-714.323730,-523.056885,-664.323425,0.000000,"air"};
+item2[] = {"deplacement",2,250,-615.667175,-446.222595,-525.667175,-396.222595,0.000000,"deplacement"};
+item3[] = {"move_to_LZ",2,250,-618.923889,-107.764130,-528.923889,-57.764145,0.000000,"move to LZ"};
+item4[] = {"aircraft_ready",4,218,-617.983887,-21.476200,-527.983887,28.523743,0.000000,"aircraft ready"};
+item5[] = {"aircraft_ready",4,218,-615.915161,-362.328522,-525.915161,-312.328552,0.000000,"aircraft ready"};
+item6[] = {"land_pickup",2,250,-617.286072,-279.904053,-527.286072,-229.904022,0.000000,"land pickup"};
+item7[] = {"get_in_",4,218,-617.981812,-198.754715,-527.981812,-148.754715,0.000000,"get in" \n ""};
+item8[] = {"getout_transport",1,250,-612.959961,794.864197,-522.959656,844.864136,0.000000,"getout transport"};
+item9[] = {"Land_LZ",2,250,-618.184570,68.074341,-528.184570,118.074364,0.000000,"Land LZ"};
+item10[] = {"get_out",4,218,-618.247742,165.175705,-528.247681,215.175522,0.000000,"get out"};
+item11[] = {"Land_Base",2,250,-613.742676,610.412476,-523.742737,660.412537,0.000000,"Land Base"};
+item12[] = {"_",-1,250,-228.346466,211.079834,-194.245239,211.079834,0.000000,""};
+item13[] = {"Climb",2,250,-617.932495,255.398773,-527.932556,305.398712,0.000000,"Climb"};
+item14[] = {"aircraft_ready",4,218,-618.184753,334.361847,-528.184448,384.361816,0.000000,"aircraft ready"};
+item15[] = {"True",4,218,-611.345581,694.580566,-521.345581,744.580566,0.000000,"True"};
+item16[] = {"markers",2,250,-615.034912,-618.384949,-525.034912,-568.384949,0.000000,"markers"};
+item17[] = {"True",4,4314,-618.192078,-537.537659,-528.192017,-487.537537,0.000000,"True"};
+item18[] = {"move_to_base",2,250,-617.864258,413.809509,-527.864319,463.809479,0.000000,"move to base"};
+item19[] = {"aircraft_ready",4,218,-614.171387,506.135315,-524.170898,556.135254,0.000000,"aircraft ready"};
+version=1;
+class LayoutItems
+{
+	class Item12
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+};
+link0[] = {0,1};
+link1[] = {1,16};
+link2[] = {2,5};
+link3[] = {3,4};
+link4[] = {4,9};
+link5[] = {5,6};
+link6[] = {6,7};
+link7[] = {7,3};
+link8[] = {9,10};
+link9[] = {10,13};
+link10[] = {11,15};
+link11[] = {13,14};
+link12[] = {14,18};
+link13[] = {15,8};
+link14[] = {16,17};
+link15[] = {17,2};
+link16[] = {18,19};
+link17[] = {19,11};
+globals[] = {0.000000,0,0,0,0,640,480,1,22,6316128,1,-816.550537,-196.262878,178.090393,-861.376038,512,858,1};
+window[] = {2,-1,-1,-1,-1,922,132,1092,174,3,530};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "z_polhelo";
+  class States
+  {
+    /*%FSM<STATE "Init">*/
+    class Init
+    {
+      name = "Init";
+      init = /*%FSM<STATEINIT""">*/"private [ ""_veh"", ""_pos"",""_posout"", ""_posbase"",""_marker"",""_vehname""];" \n
+       "" \n
+       "_veh = _this select 0;" \n
+       "_who = _this select 1;" \n
+       "_posout = _this select 2;" \n
+       "_posbase = _this select 3;" \n
+       "_vehname =format[""%1"",_veh] ;" \n
+       "_pos = getpos _who;" \n
+       "hint format [""param %1 "",_this];" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "air">*/
+        class air
+        {
+          priority = 0.000000;
+          to="markers";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_veh isKindOf ""Air"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "deplacement">*/
+    class deplacement
+    {
+      name = "deplacement";
+      init = /*%FSM<STATEINIT""">*/"[nil,_veh, ""loc"",rMOVE,_pos] call RE;" \n
+       "hint format [""_pos %1 "",_pos];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "aircraft_ready">*/
+        class aircraft_ready
+        {
+          priority = 0.000000;
+          to="land_pickup";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"unitReady _veh"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "move_to_LZ">*/
+    class move_to_LZ
+    {
+      name = "move_to_LZ";
+      init = /*%FSM<STATEINIT""">*/"[nil,_veh, ""loc"",rMOVE,_posout] call RE;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "aircraft_ready">*/
+        class aircraft_ready
+        {
+          priority = 0.000000;
+          to="Land_LZ";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"unitReady _veh"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "land_pickup">*/
+    class land_pickup
+    {
+      name = "land_pickup";
+      init = /*%FSM<STATEINIT""">*/"if ((position _veh) select 2 > 10) then {_nic = [nil, _veh, ""loc"", rLAND, ""GET IN""] call RE};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "get_in_">*/
+        class get_in_
+        {
+          priority = 0.000000;
+          to="move_to_LZ";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_who  in _veh"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "getout_transport">*/
+    class getout_transport
+    {
+      name = "getout_transport";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Land_LZ">*/
+    class Land_LZ
+    {
+      name = "Land_LZ";
+      init = /*%FSM<STATEINIT""">*/"if ((position _veh) select 2 > 10) then {_nic = [nil, _veh, ""loc"", rLAND, ""GET OUT""] call RE};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "get_out">*/
+        class get_out
+        {
+          priority = 0.000000;
+          to="Climb";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(_who  in _veh)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Land_Base">*/
+    class Land_Base
+    {
+      name = "Land_Base";
+      init = /*%FSM<STATEINIT""">*/"_nic = [nil, _veh, ""loc"", rLAND, ""LAND""] call RE;" \n
+       "" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          priority = 0.000000;
+          to="getout_transport";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Climb">*/
+    class Climb
+    {
+      name = "Climb";
+      init = /*%FSM<STATEINIT""">*/"[nil,_veh, ""loc"",rMOVE,getpos _veh] call RE;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "aircraft_ready">*/
+        class aircraft_ready
+        {
+          priority = 0.000000;
+          to="move_to_base";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"unitReady _veh"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "markers">*/
+    class markers
+    {
+      name = "markers";
+      init = /*%FSM<STATEINIT""">*/"call compile format [""" \n
+       "if (markerPos 'Z_mkup%1' select 0 == 0) then {" \n
+       "	_mkup = createMarkerLocal ['Z_mkup%1', [-500, -500, 0]];" \n
+       "	_mkup setMarkerShapeLocal 'ICON';" \n
+       "	 'Z_mkup%1' setMarkerTypeLocal 'EMPTY';" \n
+       "};"",_vehname];" \n
+       "" \n
+       "call compile format [""" \n
+       " 'Z_mkup%1'  setMarkerPosLocal _pos;" \n
+       " 'Z_mkup%1'  setMarkerTypeLocal 'mil_End';" \n
+       " 'Z_mkup%1'  setMarkerSizeLocal [0.5, 0.5];" \n
+       " 'Z_mkup%1'  setMarkerColorLocal 'ColorYellow';" \n
+       " 'Z_mkup%1'  setMarkerTextLocal _vehname;" \n
+       ";"",_vehname];" \n
+       "" \n
+       "call compile format [""" \n
+       "if (markerPos 'Z_mkout%1' select 0 == 0) then {" \n
+       "	_mkout = createMarkerLocal ['Z_mkout%1', [-500, -500, 0]];" \n
+       "	_mkout setMarkerShapeLocal 'ICON';" \n
+       "	 'Z_mkout%1' setMarkerTypeLocal 'EMPTY';" \n
+       "};"",_vehname];" \n
+       "" \n
+       "call compile format [""" \n
+       " 'Z_mkout%1' setMarkerPosLocal _posout;" \n
+       " 'Z_mkout%1' setMarkerTypeLocal 'mil_start';" \n
+       " 'Z_mkout%1' setMarkerSizeLocal [0.5, 0.5];" \n
+       " 'Z_mkout%1' setMarkerColorLocal 'ColorYellow';" \n
+       " 'Z_mkout%1' setMarkerTextLocal _vehname;" \n
+       ";"",_vehname];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          priority = 0.000000;
+          to="deplacement";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "move_to_base">*/
+    class move_to_base
+    {
+      name = "move_to_base";
+      init = /*%FSM<STATEINIT""">*/"[nil,_veh, ""loc"",rMOVE,_posbase] call RE;" \n
+       "call compile format [""" \n
+       "deleteMarkerLocal  'Z_mkup%1';" \n
+       "deleteMarkerLocal  'Z_mkout%1';" \n
+       """,_vehname];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "aircraft_ready">*/
+        class aircraft_ready
+        {
+          priority = 0.000000;
+          to="Land_Base";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"unitReady _veh"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Init";
+  finalStates[] =
+  {
+    "getout_transport",
+  };
+};
+/*%FSM</COMPILE>*/

@@ -46,9 +46,3 @@ _classString = "INS_InfSquad";
 _class = _classString call ZF_stringToConfig;
 _grp1 = [_pos, east, _class] call BIS_fnc_spawnGroup;
 [_grp7, (_pos), _max_dist_between_waypoints] call BIS_fnc_taskPatrol;
-
-
-
-
-
-if (true) exitWith {};

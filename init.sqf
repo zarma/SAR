@@ -39,7 +39,6 @@ nul= ["weapon_store_us1", 0, markerPos "store1"] execVM "Createcomposition.sqf";
 sleep 5;
 
 ok=false;
-okmk115040=false;
 
 centerW = createCenter west;
 centerE = createCenter east;

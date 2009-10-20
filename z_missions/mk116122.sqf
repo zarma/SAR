@@ -8,7 +8,7 @@
 Private ["_mk"];
 _mk = _this select 0;
 
-[(side player),"HQ"] sidechat format["mission %1", _mk];
+[_mk] execVM 'z_scripts\z_title.sqf';
 
 // Briefing
 call compile format["o%1 = player createsimpletask['Trouver la drogue',om];",_mk];
