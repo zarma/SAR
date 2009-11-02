@@ -38,8 +38,8 @@ markers = [
 
 ztasks = [];
 missions =[];
-missionsf = [["mk017124","mk036131","mk072100","mk116122"]] call Z_fnc_randomArray;//faciles
-missionsf = [["mk116122"]] call Z_fnc_randomArray;//debug
+missionsf = [["mk017124","mk036131","mk072100"]] call Z_fnc_randomArray;//faciles
+//missionsf = [["mk116122"]] call Z_fnc_randomArray;//debug
 missionsm = [["mk098067","mk104127"]] call Z_fnc_randomArray; // moyennes
 missionsd = [["mk096018","mk115040"]] call Z_fnc_randomArray; //difficiles
 

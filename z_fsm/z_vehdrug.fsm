@@ -1,0 +1,134 @@
+/*%FSM<COMPILE "C:\Program Files\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, z_vehdrug">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-491.285645,-943.505554,-401.285645,-893.505554,0.000000,"Init"};
+item1[] = {"is_it_waiting__",4,218,-605.571594,-865.693176,-515.571533,-815.692871,0.000000,"is it waiting ?"};
+item2[] = {"end",1,250,-592.895142,-643.805115,-524.552002,-578.833984,0.000000,"end"};
+item3[] = {"_",-1,250,-228.346466,211.079834,-194.245239,211.079834,0.000000,""};
+item4[] = {"__1",2,4346,-605.779236,-765.914734,-515.779236,-715.914734,0.000000,""};
+item5[] = {"tracking_marker",4,218,-490.605011,-868.187561,-400.605011,-818.187561,0.000000,"tracking marker"};
+item6[] = {"__2",2,250,-489.773315,-767.551819,-399.773315,-717.551819,0.000000,""};
+version=1;
+class LayoutItems
+{
+	class Item3
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+};
+link0[] = {0,1};
+link1[] = {1,4};
+link2[] = {4,5};
+link3[] = {5,6};
+globals[] = {0.000000,0,0,0,0,640,480,1,29,6316128,1,-760.075806,-252.738800,-179.351501,-1029.537354,610,858,1};
+window[] = {2,-1,-1,-1,-1,806,44,1004,58,3,628};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "z_vehdrug";
+  class States
+  {
+    /*%FSM<STATE "Init">*/
+    class Init
+    {
+      name = "Init";
+      init = /*%FSM<STATEINIT""">*/"private [ ""_veh""];" \n
+       "" \n
+       "_veh = _this select 0;" \n
+       "_vehname = vehicleVarName _veh;" \n
+       "" \n
+       "_veh setvariable ['tracking','true',true];" \n
+       "" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "is_it_waiting__">*/
+        class is_it_waiting__
+        {
+          priority = 0.000000;
+          to="__1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_veh getvariable 'status'=='waiting')" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "end">*/
+    class end
+    {
+      name = "end";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "__1">*/
+    class __1
+    {
+      name = "__1";
+      init = /*%FSM<STATEINIT""">*/"//hint format [""I wait %1"",_vehname];" \n
+       "_loc = z_villagelocations call BIS_fnc_selectRandom;" \n
+       "_locpos = locationposition _loc;" \n
+       "_t = createMarker [format ['mk%1dest',_vehname], _locpos ];" \n
+       "_t setMarkerType ""Flag1"";" \n
+       "" \n
+       "" \n
+       "_grp = group _veh;" \n
+       "_pos = _locpos;" \n
+       "_radius = 0;" \n
+       "_wp = _grp addWaypoint [_pos,_radius];" \n
+       "_wp setwaypointtype ""MOVE"";" \n
+       "_wp setWaypointSpeed ""FULL"";" \n
+       "_wp setWaypointCompletionRadius 300;" \n
+       "_veh setvariable ['status','moving',true];" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "tracking_marker">*/
+        class tracking_marker
+        {
+          priority = 0.000000;
+          to="__2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_veh getvariable 'tracking'=='true')"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "__2">*/
+    class __2
+    {
+      name = "__2";
+      init = /*%FSM<STATEINIT""">*/"" \n
+       "nil=[_veh,""vehicle"",""ColorGreen""] execVM ""z_scripts\z_vehmarker.sqf"";" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Init";
+  finalStates[] =
+  {
+    "end",
+  };
+};
+/*%FSM</COMPILE>*/

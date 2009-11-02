@@ -36,7 +36,9 @@ class Mission
 		"cawater2_fishing_boat",
 		"cawater2_smallboat_1",
 		"CAWater",
-		"CAWheeled2_LADA"
+		"CAWheeled2_LADA",
+		"CAWheeled2_V3S",
+		"CAWheeled3_TT650"
 	};
 	addOnsAuto[]=
 	{
@@ -48,6 +50,8 @@ class Mission
 		"CAWheeled",
 		"caair",
 		"CAWheeled2_LADA",
+		"CAWheeled2_V3S",
+		"CAWheeled3_TT650",
 		"camisc3",
 		"CAAir2_UH1Y",
 		"CAAir2_C130J",
@@ -87,7 +91,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=22;
+		items=34;
 		class Item0
 		{
 			side="LOGIC";
@@ -867,15 +871,15 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={11653.065,170.99722,12610.291};
-					azimut=-74.059402;
+					position[]={11839.028,155.3362,13011.483};
+					azimut=209.84599;
 					special="NONE";
 					id=105;
 					side="CIV";
-					vehicle="UralCivil";
+					vehicle="UralCivil2";
 					leader=1;
 					skill=0.60000002;
-					text="traffr1";
+					text="vdrug2";
 				};
 			};
 		};
@@ -938,10 +942,247 @@ class Mission
 				};
 			};
 		};
+		class Item22
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11653.065,170.99722,12610.291};
+					azimut=-74.059402;
+					special="NONE";
+					id=110;
+					side="CIV";
+					vehicle="UralCivil";
+					leader=1;
+					skill=0.60000002;
+					text="vdrug1";
+				};
+			};
+		};
+		class Item23
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12209.504,104.5224,11879.534};
+					azimut=295.58701;
+					special="NONE";
+					id=111;
+					side="CIV";
+					vehicle="UralCivil2";
+					leader=1;
+					skill=0.60000002;
+					text="vdrug4";
+				};
+			};
+		};
+		class Item24
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={13267.967,113.78956,12623.323};
+					azimut=209.84599;
+					special="NONE";
+					id=112;
+					side="CIV";
+					vehicle="UralCivil2";
+					leader=1;
+					skill=0.60000002;
+					text="vdrug3";
+				};
+			};
+		};
+		class Item25
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12998.431,44.07349,11547.248};
+					azimut=295.58701;
+					special="NONE";
+					id=113;
+					side="CIV";
+					vehicle="V3S_Civ";
+					leader=1;
+					skill=0.60000002;
+					text="vdrug5";
+				};
+			};
+		};
+		class Item26
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12902.104,42.283249,10940.321};
+					azimut=237.32581;
+					special="NONE";
+					id=114;
+					side="CIV";
+					vehicle="hilux1_civil_3_open";
+					leader=1;
+					skill=0.60000002;
+					text="vdrug6";
+				};
+			};
+		};
+		class Item27
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12668.616,29.724722,10516.524};
+					azimut=237.326;
+					special="NONE";
+					id=115;
+					side="CIV";
+					vehicle="hilux1_civil_2_covered";
+					leader=1;
+					skill=0.60000002;
+					text="vdrug7";
+				};
+			};
+		};
+		class Item28
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12788.183,7.5449309,10239.937};
+					azimut=298.88901;
+					special="NONE";
+					id=116;
+					side="CIV";
+					vehicle="TT650_Civ";
+					leader=1;
+					skill=0.60000002;
+					text="vdrug8";
+				};
+			};
+		};
+		class Item29
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12620.032,5.9899998,9551.6201};
+					azimut=194.52901;
+					special="NONE";
+					id=117;
+					side="CIV";
+					vehicle="datsun1_civil_1_open";
+					leader=1;
+					skill=0.60000002;
+					text="vdrug10";
+				};
+			};
+		};
+		class Item30
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12515.053,9.9586515,9704.626};
+					azimut=259.155;
+					special="NONE";
+					id=118;
+					side="CIV";
+					vehicle="car_sedan";
+					leader=1;
+					skill=0.60000002;
+					text="vdrug9";
+				};
+			};
+		};
+		class Item31
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6082.7524,263.16785,10539.402};
+					azimut=200;
+					id=120;
+					side="CIV";
+					vehicle="hilux1_civil_3_open";
+					leader=1;
+					skill=0.60000002;
+					text="vammo1";
+				};
+			};
+		};
+		class Item32
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6565.3867,358.77252,9643.5537};
+					azimut=276.84601;
+					id=121;
+					side="CIV";
+					vehicle="hilux1_civil_2_covered";
+					leader=1;
+					skill=0.60000002;
+					text="vammo3";
+				};
+			};
+		};
+		class Item33
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6331.583,286.2175,10382.018};
+					azimut=295.327;
+					id=122;
+					side="CIV";
+					vehicle="hilux1_civil_2_covered";
+					leader=1;
+					skill=0.60000002;
+					text="vammo2";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=62;
+		items=63;
 		class Item0
 		{
 			position[]={4772.9233,339,10138.855};
@@ -1557,6 +1798,17 @@ class Mission
 			skill=0.60000002;
 			text="hpolice";
 		};
+		class Item62
+		{
+			position[]={4652.3413,339,10248.781};
+			azimut=40;
+			special="NONE";
+			id=119;
+			side="EMPTY";
+			vehicle="Mi17_Civilian";
+			leader=1;
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
@@ -1854,7 +2106,7 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={4625.502,339,9879.0313};
+			position[]={4624.5112,339,9878.834};
 			a=5;
 			b=5;
 			rectangular=1;
@@ -1902,7 +2154,7 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={4590.5684,339,9879.5645};
+			position[]={4602.8452,339,9878.9697};
 			a=5;
 			b=5;
 			rectangular=1;
@@ -1917,7 +2169,7 @@ class Mission
 		};
 		class Item8
 		{
-			position[]={4609.2358,339,9880.0469};
+			position[]={4613.9263,339,9878.9658};
 			a=5;
 			b=5;
 			rectangular=1;
@@ -1925,15 +2177,15 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			text="Trafficants";
-			expActiv="nil = [] execVM ""z_scripts\z_trafficants.sqf"";";
+			text="Locations";
+			expActiv="nil = [] execVM ""z_scripts\z_initlocations.sqf"";";
 			class Effects
 			{
 			};
 		};
 		class Item9
 		{
-			position[]={4638.6948,339,9878.5273};
+			position[]={4635.3286,339,9878.7256};
 			a=5;
 			b=5;
 			rectangular=1;

@@ -29,6 +29,9 @@ setTerrainGrid 50;
 
 // initialisation du briefing
 nul=[] execVM "briefing.sqf";
+//
+nul=[] execVM "z_scripts\z_initlocations.sqf";
+
 // initialisation des patrouilles ennemies
 nul=[] execVM "patrols.sqf";
 
@@ -45,5 +48,11 @@ centerE = createCenter east;
 centerG = createCenter resistance;
 centerC = createCenter civilian;
 
-// initialization of markers array
+// initialization of missions array
 nul=[] execVM "initmissions.sqf";
+sleep 10;
+z_teamdrug = [];
+nul=[] execVM "z_scripts\z_teams.sqf";
+
+
+execfsm 'z_fsm\z_teamdrug.fsm';

@@ -1,13 +1,12 @@
 ﻿//////////////////////////////////////////////////////////////////
 // Function file for Armed Assault 2
 // Created by: =[A*C]= Z
-// Parcours aléatoires des trafficants
+// trajet terrestre
 //////////////////////////////////////////////////////////////////
 
-_loclist = nearestlocations [markerpos "mkcenter", ["NameVillage"], 8000];
+_veh = _this select 0;
+_locations = _this select 1;
 
-
-[(side player),"HQ"] sidechat format["_loclist %1  ", _loclist];
 _n = 0;
 /*
 {

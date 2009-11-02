@@ -14,9 +14,13 @@ _act = _this select 1;
 
 if (_act=="stop") then {
 
-	format ["Tir de semonce sur %1", typeof(_unit)] call z_smsg;
+//	format ["Tir de semonce sur %1", typeof(_unit)] call z_smsg;
+	format ["Tir de semonce sur %1", _unit] call z_smsg;
+	_unit setFuel 0;
+	sleep 15;
+	_unit setFuel 1;
 	
-	_unit forceSpeed 0;
+//	_unit forceSpeed 0;
 /*  _qt = 0.05;
   while {(fuel _unit)>_qt } do {
     _fuel = fuel _unit;

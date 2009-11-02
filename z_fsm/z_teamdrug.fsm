@@ -1,0 +1,86 @@
+/*%FSM<COMPILE "C:\Program Files\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, z_teamdrug">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-491.285645,-943.505554,-401.285645,-893.505554,0.000000,"Init"};
+item1[] = {"is_a_teamdrug__",4,218,-605.571594,-865.693176,-515.571533,-815.692871,0.000000,"is a teamdrug ?"};
+item2[] = {"end",1,4346,-592.895142,-643.805115,-524.552002,-578.833984,0.000000,"end"};
+item3[] = {"_",-1,250,-228.346466,211.079834,-194.245239,211.079834,0.000000,""};
+item4[] = {"__1",2,250,-605.779236,-765.914734,-515.779236,-715.914734,0.000000,""};
+version=1;
+class LayoutItems
+{
+	class Item3
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+};
+link0[] = {0,1};
+link1[] = {1,4};
+globals[] = {0.000000,0,0,0,0,640,480,1,23,6316128,1,-760.075806,-252.738800,-179.351501,-1029.537354,610,858,1};
+window[] = {2,-1,-1,-32000,-32000,980,176,1136,232,3,628};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "z_teamdrug";
+  class States
+  {
+    /*%FSM<STATE "Init">*/
+    class Init
+    {
+      name = "Init";
+      init = /*%FSM<STATEINIT""">*/"private [ ""_var""];" \n
+       "" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "is_a_teamdrug__">*/
+        class is_a_teamdrug__
+        {
+          priority = 0.000000;
+          to="__1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"count z_teamdrug>0;" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "end">*/
+    class end
+    {
+      name = "end";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "__1">*/
+    class __1
+    {
+      name = "__1";
+      init = /*%FSM<STATEINIT""">*/"hint format [""%1"",z_teamdrug];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Init";
+  finalStates[] =
+  {
+    "end",
+  };
+};
+/*%FSM</COMPILE>*/
