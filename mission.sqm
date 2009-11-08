@@ -100,7 +100,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4306.7061,354.54874,11359.247};
+					position[]={4316.5342,338.9798,10036.939};
 					id=0;
 					side="LOGIC";
 					vehicle="Logic";
@@ -113,7 +113,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4309.2275,352.67303,11343.394};
+					position[]={4319.0557,338.94397,10021.086};
 					type="AND";
 					expActiv="TOP1 = true";
 					class Effects
@@ -134,7 +134,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4330.3984,350.15894,11360.274};
+					position[]={4340.2266,338.95792,10037.967};
 					id=1;
 					side="LOGIC";
 					vehicle="Logic";
@@ -567,7 +567,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4262.1509,358.58862,11384.876};
+					position[]={4313.1006,339.67609,10085.112};
 					id=71;
 					side="LOGIC";
 					vehicle="FunctionsManager";
@@ -2048,7 +2048,7 @@ class Mission
 		items=10;
 		class Item0
 		{
-			position[]={4359.7583,337.65112,11365.903};
+			position[]={4369.5864,338.9776,10043.596};
 			a=5;
 			b=5;
 			timeoutMin=15;
@@ -2064,7 +2064,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={4349.7271,342.37143,11365.415};
+			position[]={4359.5552,338.96436,10043.107};
 			a=5;
 			b=5;
 			timeoutMin=15;
@@ -2079,7 +2079,7 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={4300.3467,356.98587,11381.976};
+			position[]={4310.1748,339.09006,10059.668};
 			a=0;
 			b=0;
 			age="UNKNOWN";
@@ -2091,7 +2091,7 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={4300.6924,357.64441,11392.602};
+			position[]={4310.5205,339.24884,10070.294};
 			a=0;
 			b=0;
 			timeoutMin=1;
@@ -2106,7 +2106,7 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={4624.5112,339,9878.834};
+			position[]={4331.8691,339.9176,10109.458};
 			a=5;
 			b=5;
 			rectangular=1;
@@ -2122,7 +2122,9 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={4691.3062,243.90669,12029.156};
+			position[]={4328.1582,339.14658,10067.19};
+			a=0;
+			b=0;
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
@@ -2154,7 +2156,7 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={4602.8452,339,9878.9697};
+			position[]={4310.2031,341.05063,10109.594};
 			a=5;
 			b=5;
 			rectangular=1;
@@ -2169,7 +2171,7 @@ class Mission
 		};
 		class Item8
 		{
-			position[]={4613.9263,339,9878.9658};
+			position[]={4321.2842,340.49606,10109.59};
 			a=5;
 			b=5;
 			rectangular=1;
@@ -2185,7 +2187,7 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={4635.3286,339,9878.7256};
+			position[]={4342.6865,339.4007,10109.35};
 			a=5;
 			b=5;
 			rectangular=1;

@@ -14,10 +14,15 @@ _veh setvariable ['tracking','true',true];
 //format  ["I wait %1",_vehname] call z_smsg;
 _loc = z_villagelocations call BIS_fnc_selectRandom;
 _locpos = locationposition _loc;
+if ( format ["%1", (_veh getVariable "markerdestination")] != "<null>") then {
+			deleteMarker (_unit getVariable "markerdestination");
+			};
 _t = createMarker [format ['mk%1dest%2',_vehname,daytime], _locpos ];
 _t setMarkerText format ['mk%1dest%2',_vehname,daytime];
 _t setMarkerPos  _locpos;
 _t setMarkerType "Warning";
+_veh setvariable ['markerdestination',_t,true];
+
 
 
 _grp = group _veh;

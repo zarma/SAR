@@ -28,8 +28,7 @@ while {(count z_teamammo)>0} do {
 		format ["%1 %2",_x,_status] call z_smsg;
 		if (_status=='waiting') then {
 			hndl = [_x] execVM "z_scripts\z_vehammo.sqf";
-			_v = _x;
-			_v addeventhandler ["FiredNear", {[_v,"stop"] execVM "z_scripts\z_FiredNear.sqf";}];
+			_x addeventhandler ["FiredNear", {[_this,"stop"] execVM "z_scripts\z_FiredNear.sqf";}];
 		};
 	} foreach z_teamammo;
 	sleep 20;
