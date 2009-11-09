@@ -29,11 +29,11 @@ if (_act=="stop") then {
 		_driver doMove position _firer;
 		_savedstatus=_unit getVariable "status";
 		_unit setvariable ['status','policecontroling',true];
-		_act1 = _unit addAction["Control vehicle","z_scripts\z_control_vehicle.sqf", [_unit], 1, false, false];
-		_act2 = _unit addAction["Mark vehicle","z_scripts\z_mark_vehicle.sqf", [_unit], 1, false, false];
+		_act1 = _unit addAction["Control vehicle","z_scripts\z_control_vehicle.sqf", [_unit,"start"], 1, false, false];
+		_act2 = _unit addAction["Mark vehicle","z_scripts\z_control_vehicle.sqf", [_unit,"mark"], 1, false, false];
 		doStop _driver;
 		waitUntil {(_unit getVariable "status")!='policecontroling'};
-		sleep 20;
+//		sleep 20;
 		format ["Véhicule %1 relâché.", typeof(_unit),_firer] call z_smsg;
 		_unit setFuel 1;
 		_crew allowGetIn true;

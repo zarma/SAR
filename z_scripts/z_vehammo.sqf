@@ -53,5 +53,5 @@ _t setTriggerActivation ["CIV","PRESENT",false];
 _veh setvariable ['status','moving',true];
 
 if ((_veh getvariable 'tracking')=='true') then {
-	nil=[_veh,"mil_triangle","ColorRed"] execVM "z_scripts\z_vehmarker.sqf";
+	nil=[_veh,"mil_triangle","ColorGreen"] execVM "z_scripts\z_vehmarker.sqf";
 	};
