@@ -17,10 +17,12 @@ while {(_loop)} do {
 		_element = [vammo%1];
 		vammo%1 setvariable ['status','waiting',true];
 		z_teamammo = z_teamammo + _element;
+		(_element select 0) addeventhandler ['FiredNear', {[_this,'stop'] execVM 'z_scripts\z_FiredNear.sqf';}];
 	};
 	
 	",_idx];
 };
+
 while {(count z_teamammo)>0} do {
 //	format ["test waiting "] call z_smsg;
 	{		
@@ -28,7 +30,6 @@ while {(count z_teamammo)>0} do {
 		format ["%1 %2",_x,_status] call z_smsg;
 		if (_status=='waiting') then {
 			hndl = [_x] execVM "z_scripts\z_vehammo.sqf";
-			_x addeventhandler ["FiredNear", {[_this,"stop"] execVM "z_scripts\z_FiredNear.sqf";}];
 		};
 	} foreach z_teamammo;
 	sleep 20;

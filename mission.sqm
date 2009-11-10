@@ -76,7 +76,7 @@ class Mission
 	randomSeed=12495445;
 	class Intel
 	{
-		briefingName="co20-z-blue-002-OEFT-v0.67";
+		briefingName="co20-z-blue-002-OEFT-v0.68";
 		briefingDescription="Operation Enduring Freedom Tchernarus";
 		resistanceEast=1;
 		startWeather=0.89176333;
@@ -2132,7 +2132,6 @@ class Mission
 			expActiv="nil = [] execVM 'z_scripts\z_clientside.sqf';";
 			class Effects
 			{
-				track="Track14_Close_Quarter_Combat";
 				titleType="TEXT";
 				titleEffect="PLAIN DOWN";
 				title="Operation Enduring Freedom Tchernarus by =[A*C]= Z";
