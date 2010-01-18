@@ -13,7 +13,9 @@ _act = _this select 1;
 
 if (_act=="stop") then {
 
-	format ["Tir de semonce sur véhicule"] call z_smsg;
+
+  _name = gettext (configFile >> "CfgVehicles" >> (typeof _unit) >> "displayName"); 
+	format ["Tir de semonce sur véhicule %1",_name] call z_smsg;
 	_unit setFuel 0;
 	sleep 2;
 	
